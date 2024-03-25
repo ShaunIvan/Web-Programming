@@ -4,18 +4,31 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./CSS/cart_page.css" />
+
     <title>Cart</title>
   </head>
   <body>
-        <nav>
-            <div class="logo">
-                <h1>Logo</h1>
-            </div>
-    
-            <div class="searchbox">
-                <input type="search" placeholder="Search here">
-            </div>
-    
-        </nav>
+    <nav>
+      <div class="logo">
+        <h1>Logo</h1>
+      </div>
+
+      <div class="searchbox">
+        <input type="search" placeholder="Search here" /><button>Search</button>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="command__container">
+        <input type="checkbox" id="selectAll" />
+        <label for="selectAll">Select All</label>
+      </div>
+      <div class="cart__items">
+        <input type="checkbox" />
+        <img src="" alt="" class="product__image" />
+        <p class="product__name">ITEMS HERE</p>
+        <p class="product__price">000</p>
+        <input type="number" value="1">
+      </div>
+    </div>
   </body>
 </html>
