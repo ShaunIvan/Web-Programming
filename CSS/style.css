@@ -4,9 +4,13 @@ body {
     font-family: Arial;
 }
 
+/* Logo CSS */
+
 .logo {
     
 }
+
+/* Navigation Bar */
 
 nav {
     display: flex;
@@ -15,6 +19,8 @@ nav {
     text-align: center;
     padding: 15px 30px;
 }
+
+/* Navigation Search Box */
 
 nav .searchbox input {
     outline: none;
@@ -26,6 +32,8 @@ nav .searchbox input {
     margin-left: 115%;
     border-radius: 5px;
 }
+
+/* Contents */
 
 #container1 {
     background-color: #E4E4E4;
