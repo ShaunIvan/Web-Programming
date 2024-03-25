@@ -24,21 +24,33 @@
       </div>
     </nav>
     <div class="container">
-      <div class="grid left-container">
-        <div class="command__container">
+      <div class="command__container">
+        <div class="select-container">
           <input type="checkbox" id="selectAll" />
           <label for="selectAll">Select All</label>
         </div>
+        <div class="delete-container">
+          <button class="deletebtn">
+            <img class="deletebtn-img" src="./IMG/trashbin.png" alt="" />DELETE
+          </button>
+        </div>
+      </div>
+      <div class="grid cart">
         <div class="cart__items">
           <input type="checkbox" />
           <img src="./IMG/item1.png" alt="" class="product__image" />
           <p class="item__name">Gaming monitor 100hz</p>
           <div class="price--delete">
             <p class="product__price">$100.00</p>
-            <button>delete</button>
+            <button class="deletebtn">
+              <img class="deletebtn-img" src="./IMG/trashbin.png" alt="" />
+            </button>
           </div>
-
+          <label for="item__quantity">Quantity:</label>
           <input type="number" min="1" value="1" class="item__quantity" />
+        </div>
+        <div class="order__summary">
+            
         </div>
       </div>
     </div>

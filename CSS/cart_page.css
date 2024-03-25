@@ -7,6 +7,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: "Jost";
+    min-width: 950px;
 }
 
 .logo {
@@ -47,6 +48,8 @@ nav {
     border-radius: 5px 0 0 5px;
 }
 
+/* LEFT CONTAINER CART */
+
 /* CONTAINER */
 .container{
     height: 100vh;
@@ -60,16 +63,38 @@ nav {
     display: grid;
 }
 
-.left-container{
-    min-width: 980px;
+.cart{
+    grid-template-columns: 1fr;
 }
 
 .command__container{
+    display: flex;
     height: 36px; 
     width: 60%;
     background-color: #fff;
     border-radius: 8px 8px 0 0;
     margin-left: 42px;
+    align-items: center;
+}
+
+.select-container{
+    margin-left: 4px;
+    flex: 1;
+}
+
+.delete-container button{
+    display: flex;
+    background: transparent;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none;
+    flex: 1;
+}
+
+.delete-container button img{
+    width: 18px;
+    margin-right: 4px;
 }
 
 .cart__items{
@@ -79,6 +104,11 @@ nav {
     background-color: #FFF;
     margin: 10px 0 0 42px;
     justify-content: space-between;
+}
+
+.cart__items label{
+    align-self: center;
+    font-size: 17px;
 }
 
 .cart__items input{
@@ -93,20 +123,45 @@ nav {
 }
 
 .product__price{
+    color: #57C261;
     font-size: 20px;
+    margin-bottom:0;
 }
 
 .price--delete{
     text-align: center;
     align-self: center;
     flex: 0.50;
+    height: 65px;
+}
+
+.price--delete button{
+    position: relative;
+    align-self: center;
+    background: transparent;
+    border: none;
+    top: 5px;
+    cursor: pointer;
+}
+.deletebtn-img{
+    width: 20px;
 }
 
 
 .item__quantity{
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     font-size: 18px;
     text-align: center;
     align-self: center;
+    border: 2px solid #313131;
+    border-radius: 8px;
+}
+
+/* ORDER SUMMARY */
+
+.order__summary{
+    width: 418;
+    height: 279;
+    background-color: #FFF;
 }
