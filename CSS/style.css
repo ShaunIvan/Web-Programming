@@ -1,0 +1,35 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+}
+
+.logo {
+    
+}
+
+nav {
+    display: flex;
+    background-color: #57C261;
+    position: relative;
+    text-align: center;
+    padding: 15px 30px;
+}
+
+nav .searchbox input {
+    outline: none;
+    height: 40px;
+    width: 500px;
+    padding-left: 10px;
+    font-size: 15px;
+    margin-top: 3%;
+    margin-left: 115%;
+    border-radius: 5px;
+}
+
+#container1 {
+    background-color: #E4E4E4;
+    margin-top: 0%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
