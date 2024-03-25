@@ -32,9 +32,22 @@ nav {
 }
 
 .container1 {
+    border: solid red;
     height: 100vh;
     background-color: #E4E4E4;
     margin-top: 0%;
     margin-left: 10%;
     margin-right: 10%;
 } 
+
+.items {
+    border: solid;
+}
+
+.items img {
+    float: left; 
+    height: 150px;
+    width: 206px;
+    margin: 1%;
+}
+
