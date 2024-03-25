@@ -3,6 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./CSS/cart_page.css" />
 
     <title>Cart</title>
@@ -17,22 +23,53 @@
         <input type="search" placeholder="Search here" /><button>Search</button>
       </div>
     </nav>
+
     <div class="container">
-      <div class="grid left-container">
-        <div class="command__container">
+      <div class="command__container">
+        <div class="select-container">
           <input type="checkbox" id="selectAll" />
           <label for="selectAll">Select All</label>
         </div>
+        <div class="delete-container">
+          <button class="deletebtn">
+            <img class="deletebtn-img" src="./IMG/trashbin.png" alt="" />DELETE
+          </button>
+        </div>
+      </div>
+      <div class="grid cart">
         <div class="cart__items">
           <input type="checkbox" />
           <img src="./IMG/item1.png" alt="" class="product__image" />
           <p class="item__name">Gaming monitor 100hz</p>
           <div class="price--delete">
             <p class="product__price">$100.00</p>
-            <button>delete</button>
+            <button class="deletebtn">
+              <img class="deletebtn-img" src="./IMG/trashbin.png" alt="" />
+            </button>
           </div>
-
+          <label for="item__quantity">Quantity:</label>
           <input type="number" min="1" value="1" class="item__quantity" />
+        </div>
+
+        <div class="order">
+          <div class="Summary">
+            <h2>Order Summary</h2>
+          </div>
+          <div class="grid price__section">
+            <div>
+              <p>Subtotal (1 item/s)</p>
+              <p>Shipping Fee</p>
+            </div>
+            <div class="subtotal_price">
+              <p>$100.00</p>
+              <p>$0.00</p>
+            </div>
+          </div>
+          <div class="grid price__section">
+            <p>Total Amount</p>
+            <p class="subtotal_price">$100.00</p>
+          </div>
+          <button id="checkoutbtn">PROCEED TO CHECKOUT(1)</button>
         </div>
       </div>
     </div>
