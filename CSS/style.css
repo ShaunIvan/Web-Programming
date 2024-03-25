@@ -42,6 +42,7 @@ nav {
 
 .items {
     border: solid;
+    background-color: aqua;
 }
 
 .items img {
