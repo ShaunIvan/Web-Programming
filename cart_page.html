@@ -18,16 +18,22 @@
       </div>
     </nav>
     <div class="container">
-      <div class="command__container">
-        <input type="checkbox" id="selectAll" />
-        <label for="selectAll">Select All</label>
-      </div>
-      <div class="cart__items">
-        <input type="checkbox" />
-        <img src="" alt="" class="product__image" />
-        <p class="product__name">ITEMS HERE</p>
-        <p class="product__price">000</p>
-        <input type="number" value="1">
+      <div class="grid left-container">
+        <div class="command__container">
+          <input type="checkbox" id="selectAll" />
+          <label for="selectAll">Select All</label>
+        </div>
+        <div class="cart__items">
+          <input type="checkbox" />
+          <img src="./IMG/item1.png" alt="" class="product__image" />
+          <p class="item__name">Gaming monitor 100hz</p>
+          <div class="price--delete">
+            <p class="product__price">$100.00</p>
+            <button>delete</button>
+          </div>
+
+          <input type="number" min="1" value="1" class="item__quantity" />
+        </div>
       </div>
     </div>
   </body>
