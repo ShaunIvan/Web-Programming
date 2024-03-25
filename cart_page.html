@@ -23,6 +23,7 @@
         <input type="search" placeholder="Search here" /><button>Search</button>
       </div>
     </nav>
+
     <div class="container">
       <div class="command__container">
         <div class="select-container">
@@ -49,8 +50,26 @@
           <label for="item__quantity">Quantity:</label>
           <input type="number" min="1" value="1" class="item__quantity" />
         </div>
-        <div class="order__summary">
-            
+
+        <div class="order">
+          <div class="Summary">
+            <h2>Order Summary</h2>
+          </div>
+          <div class="grid price__section">
+            <div>
+              <p>Subtotal (1 item/s)</p>
+              <p>Shipping Fee</p>
+            </div>
+            <div class="subtotal_price">
+              <p>$100.00</p>
+              <p>$0.00</p>
+            </div>
+          </div>
+          <div class="grid price__section">
+            <p>Total Amount</p>
+            <p class="subtotal_price">$100.00</p>
+          </div>
+          <button id="checkoutbtn">PROCEED TO CHECKOUT(1)</button>
         </div>
       </div>
     </div>
