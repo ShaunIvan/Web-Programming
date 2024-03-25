@@ -4,13 +4,9 @@ body {
     font-family: Arial;
 }
 
-/* Logo CSS */
-
 .logo {
     
 }
-
-/* Navigation Bar */
 
 nav {
     display: flex;
@@ -20,24 +16,25 @@ nav {
     padding: 15px 30px;
 }
 
-/* Navigation Search Box */
+.searchbox{
+    position: relative;
+    margin: 0 auto;
+}
 
-nav .searchbox input {
+
+.searchbox input {
     outline: none;
-    height: 40px;
-    width: 500px;
+    height: 56px;
+    width: 746px;
     padding-left: 10px;
     font-size: 15px;
-    margin-top: 3%;
-    margin-left: 115%;
     border-radius: 5px;
 }
 
-/* Contents */
-
-#container1 {
+.container1 {
+    height: 100vh;
     background-color: #E4E4E4;
     margin-top: 0%;
     margin-left: 10%;
     margin-right: 10%;
-}
+} 
