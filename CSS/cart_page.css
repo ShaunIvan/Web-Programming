@@ -1,3 +1,8 @@
+html{
+    margin: 0;
+    padding: 0;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -10,30 +15,60 @@ body {
 
 nav {
     display: flex;
-    width: 100%;
+    height: 120px;
     background-color: #57C261;
-    position: relative;
     text-align: center;
     padding: 15px 30px;
 }
 
 .searchbox{
     position: relative;
-    margin: 0 auto;
+    margin: 52px auto 0;
+    align-self: center;
+}
+
+.searchbox button{
+    height: 56px;
+    width: 55px;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+    background-color: #204B7E;
+    border-radius: 0 5px 5px 0;
 }
 
 .searchbox input {
     outline: none;
-    height: 40px;
-    width: 500px;
+    height: 56px;
+    width: 746px;
     padding-left: 10px;
     font-size: 15px;
-    border-radius: 5px;
+    border: none;
+    border-radius: 5px 0 0 5px;
 }
 
-#container1 {
-    background-color: #E4E4E4;
-    margin-top: 0%;
-    margin-left: 10%;
-    margin-right: 10%;
+/* CONTAINER */
+.container{
+    height: 100vh;
+    max-width: 1440px;
+    background-color: #F0F0F0;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+
+.command__container{
+    height: 36px; 
+    width: 60%;
+    background-color: #fff;
+    border-radius: 8px 8px 0 0;
+    margin-left: 42px;
+}
+
+.cart__items{
+    display: flex;
+    height: 126px;
+    width: 60%;
+    background-color: #FFF;
+    margin: 10px 0 0 42px;
+    justify-content: space-between;
 }
