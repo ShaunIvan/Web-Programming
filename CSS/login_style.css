@@ -1,0 +1,89 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Jost";
+}
+
+/* Logo */
+
+.logo {
+    
+}
+
+/* Form setup */
+form {
+    text-align: center;
+}
+
+/* Label */
+label{
+    display: block;
+   
+    text-align: left;
+    
+}
+
+/* Input */
+input[type=text], input[type=password]{
+    width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+
+/* Navigation */
+.logocenter{
+    position: relative;
+    margin: 0 auto;
+}
+
+nav {
+    display: flex;
+    background-color: #57C261;
+    position: relative;
+    text-align: center;
+    padding: 15px 30px;
+}
+
+/* Item Container */
+.containerLogin{
+    padding: 0px;
+    border: solid 1px rgb(255, 255, 255);
+    background-color: #e4e4e4;
+    margin-top: 10%;
+    margin-left: 40%;
+    margin-right: 40%;
+    margin-bottom: -4%;
+} 
+h2 {
+    font-size: 40px;
+    text-align: center;
+    letter-spacing: 5px;
+
+}
+
+.container1 {
+    padding: 20px;
+    border: solid 1px rgb(255, 255, 255);
+    background-color: #e4e4e4;
+    margin-top: 2%;
+    margin-left: 40%;
+    margin-right: 40%;
+} 
+
+
+
+
+

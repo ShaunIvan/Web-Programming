@@ -10,6 +10,7 @@ body {
     
 }
 
+
 /* Navigation */
 
 nav {
@@ -25,6 +26,7 @@ nav {
 .searchbox{
     position: relative;
     margin: 0 auto;
+    border: solid;
 }
 
 .searchbox input {
@@ -34,6 +36,7 @@ nav {
     padding-left: 6px;
     font-size: 15px;
     border-radius: 5px;
+    border: solid;
 }
 
 .searchbox button{
@@ -45,6 +48,19 @@ nav {
     cursor: pointer;
     background-color: #204B7E;
     border-radius: 0 5px 5px 0;
+}
+
+/* Cart Icon */
+
+#cart {
+    border: solid;
+    margin-right: 80px;
+}
+#cart img {
+    height: 40px;
+    width: 40px;
+    border: solid;
+    
 }
 
 /* Item Container */
@@ -153,6 +169,7 @@ nav {
     background-color: #204B7E;
 }
 
+<<<<<<< HEAD
 #item1 {
     background-color:  white;
     border-radius: 5px;
@@ -228,3 +245,6 @@ nav {
     border-radius: 5px;
     padding: 6px;
 }
+=======
+
+>>>>>>> b95262ae5cbea9fa7ac900618767d018beb249a1
