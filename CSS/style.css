@@ -26,15 +26,17 @@ nav {
 .searchbox{
     position: relative;
     margin: 0 auto;
+    border: solid;
 }
 
 .searchbox input {
     outline: none;
     height: 56px;
     width: 746px;
-    padding-left: 10px;
+    padding-left: 6px;
     font-size: 15px;
     border-radius: 5px;
+    border: solid;
 }
 
 .searchbox button{
@@ -48,14 +50,28 @@ nav {
     border-radius: 0 5px 5px 0;
 }
 
+/* Cart Icon */
+
+#cart {
+    border: solid;
+    margin-right: 80px;
+}
+#cart img {
+    height: 40px;
+    width: 40px;
+    border: solid;
+    
+}
+
 /* Item Container */
 
 .container1 {
+    position: relative;
     border: solid 1px white;
     background-color: #E4E4E4;
     margin-top: 0%;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin: 0 auto;
+    max-width: 1460px;
 } 
 
 /* Slider */
@@ -111,6 +127,13 @@ nav {
     height: 200px;
     width: 260px;
 }
+.first__items button {
+    border-radius: 4px;
+    padding: 7px;
+    margin-bottom: 3%;
+    color: white;
+    background-color: #204B7E;
+}
 
 .second__items {
     display: flex;
@@ -120,6 +143,13 @@ nav {
 .second__items img {
     height: 200px;
     width: 260px;
+}
+.second__items button {
+    border-radius: 4px;
+    padding: 7px;
+    margin-bottom: 3%;
+    color: white;
+    background-color: #204B7E;
 }
 
 .third__items {
@@ -131,10 +161,90 @@ nav {
     height: 200px;
     width: 260px;
 }
-
-#item1 {
-    background-color: orange;
-    border-radius: 5px;
+.third__items button {
+    border-radius: 4px;
+    padding: 7px;
+    margin-bottom: 3%;
+    color: white;
+    background-color: #204B7E;
 }
 
+<<<<<<< HEAD
+#item1 {
+    background-color:  white;
+    border-radius: 5px;
+    padding: 6px;
+}
+#item2 {
+    background-color:  white;
+    border-radius: 5px;
+    padding: 6px;
+}
+#item3 {
+    background-color:  white;
+    border-radius: 5px;
+    padding: 6px;
+}
+#item4 {
+    background-color:  white;
+    border-radius: 5px;
+    padding: 6px;
+}
+#item5 {
+    background-color:  white;
+    border-radius: 5px;
+    padding: 6px;
+}
+#item6 {
+    background-color:  white;
+    border-radius: 5px;
+    padding: 6px;
+}
+#item7 {
+    background-color:  white;
+    border-radius: 5px;
+    padding: 6px;
+}
+#item8 {
+    background-color:  white;
+    border-radius: 5px;
+    padding: 6px;
+}
+#item9 {
+    background-color:  white;
+    border-radius: 5px;
+    padding: 6px;
+}
+#item10 {
+    background-color:  white;
+    border-radius: 5px;
+    padding: 6px;
+}
+#item11 {
+    background-color:  white;
+    border-radius: 5px;
+    padding: 6px;
+}
+#item12 {
+    background-color:  white;
+    border-radius: 5px;
+    padding: 6px;
+}
+#item13 {
+    background-color:  white;
+    border-radius: 5px;
+    padding: 6px;
+}
+#item14 {
+    background-color:  white;
+    border-radius: 5px;
+    padding: 6px;
+}
+#item15 {
+    background-color:  white;
+    border-radius: 5px;
+    padding: 6px;
+}
+=======
 
+>>>>>>> b95262ae5cbea9fa7ac900618767d018beb249a1
