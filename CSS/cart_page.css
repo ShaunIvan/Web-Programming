@@ -73,7 +73,6 @@ nav {
     grid-template-columns: repeat(2, 1fr);
     column-gap: 10px;
     margin: 0 20px;
-
 }
 
 .command__container{
@@ -111,7 +110,7 @@ nav {
     height: 126px;
     width: 800px;
     background-color: #FFF;
-    margin: 10px;
+    margin: 10px 10px 0;
 }
 
 .cart__items label{
@@ -170,9 +169,11 @@ nav {
 
 .order{
     width: 350px;
+    max-height: 300px;
     background-color: #FFF;
     border-radius: 8px 8px 0 0;
     padding: 10px;
+    margin-top: 10px;
 }
 .Summary{
     border-bottom: 1px solid #ccc;
