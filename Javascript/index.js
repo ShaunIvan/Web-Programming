@@ -22,17 +22,16 @@ function addToCart(event) {
     price: itemPrice,
   };
 
-  let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+  let product_items = JSON.parse(localStorage.getItem("product_items")) || [];
 
-  cartItems.push(itemDetails);
+  product_items.push(itemDetails);
 
-  localStorage.setItem("cartItems", JSON.stringify(cartItems));
+  localStorage.setItem("product_items", JSON.stringify(product_items));
 
-  var storedItem = localStorage.getItem("cartItems");
+  var storedItem = localStorage.getItem("product_items");
   var storedItemParse = JSON.parse(storedItem);
 
   console.log(storedItemParse);
-
 }
 
 function logout() {
