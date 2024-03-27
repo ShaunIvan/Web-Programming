@@ -144,7 +144,7 @@ nav {
 
 .product__container{
     grid-template-columns: repeat(5, auto);
-    margin: 0 auto;
+    margin: 0 10px;
 }
 
 .product__container img{
