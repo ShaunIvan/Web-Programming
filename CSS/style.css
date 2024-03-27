@@ -26,7 +26,6 @@ nav {
 .searchbox{
     position: relative;
     margin: 0 auto;
-    border: solid;
 }
 
 .searchbox input {
@@ -36,13 +35,13 @@ nav {
     padding-left: 6px;
     font-size: 15px;
     border-radius: 5px;
-    border: solid;
+    margin-top: 6px;
 }
 
 .searchbox button{
     color: white;
     height: 56px;
-    width: 55px;
+    width: 60px;
     border: none;
     font-size: 15px;
     cursor: pointer;
@@ -53,15 +52,32 @@ nav {
 /* Cart Icon */
 
 #cart {
-    border: solid;
-    margin-right: 80px;
+    display: flex;
+    margin-right: 0px;
+    text-decoration: none;
+    color: white;
+}
+#cart a {
+    margin-right: 0px;
+    text-decoration: none;
+    color: white;
+   
 }
 #cart img {
     height: 40px;
     width: 40px;
-    border: solid;
-    
+    margin-top: 15px;
+    margin-right: 20px;
 }
+
+#logout {
+    margin: 25px;
+}
+#logout a {
+    text-decoration: none;
+    color: white;
+}
+
 
 /* Item Container */
 
@@ -80,6 +96,7 @@ nav {
     padding: 2rem;
 }
 .slider-wrapper {
+    display: grid;
     position: relative;
     max-width: 48rem;
     /* margin: 0 auto; */
@@ -133,6 +150,7 @@ nav {
     margin-bottom: 3%;
     color: white;
     background-color: #204B7E;
+    border: none;
 }
 
 .second__items {
@@ -150,6 +168,7 @@ nav {
     margin-bottom: 3%;
     color: white;
     background-color: #204B7E;
+    border: none;
 }
 
 .third__items {
@@ -167,9 +186,11 @@ nav {
     margin-bottom: 3%;
     color: white;
     background-color: #204B7E;
+    border: none;
 }
 
-<<<<<<< HEAD
+/* Specific Items */
+
 #item1 {
     background-color:  white;
     border-radius: 5px;
@@ -245,6 +266,3 @@ nav {
     border-radius: 5px;
     padding: 6px;
 }
-=======
-
->>>>>>> b95262ae5cbea9fa7ac900618767d018beb249a1
