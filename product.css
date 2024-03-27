@@ -17,30 +17,31 @@ nav {
 
 /* Search Box */
 
-.searchbox{
-    position: relative;
-    margin: 0 auto;
+.searchbox {
+    display: flex;
+    margin: 0px auto 0;
+    align-self: center;
+}
+
+.searchbox button{
+    height: 56px;
+    width: 55px;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+    color: white;
+    background-color: #204B7E;
+    border-radius: 0 5px 5px 0;
 }
 
 .searchbox input {
     outline: none;
     height: 56px;
     width: 746px;
-    padding-left: 6px;
+    padding-left: 10px;
     font-size: 15px;
-    border-radius: 5px;
-    margin-top: 6px;
-}
-
-.searchbox button{
-    color: white;
-    height: 56px;
-    width: 60px;
     border: none;
-    font-size: 15px;
-    cursor: pointer;
-    background-color: #204B7E;
-    border-radius: 0 5px 5px 0;
+    border-radius: 5px 0 0 5px;
 }
 
 /* Cart Icon */
