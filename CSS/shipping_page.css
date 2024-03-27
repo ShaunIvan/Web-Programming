@@ -35,7 +35,7 @@ nav {
 }
 
 .searchbox{
-    position: relative;
+    display: flex;
     margin: 52px auto 0;
     align-self: center;
 }

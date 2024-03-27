@@ -82,6 +82,7 @@ nav {
 /* Item Container */
 
 .container1 {
+    display: grid;
     position: relative;
     border: solid 1px white;
     background-color: #E4E4E4;
@@ -133,9 +134,7 @@ nav {
     transition: opacity ease 250ms;
 }
 
-
 /* Items */
-
 .grid{
     display: grid;
     grid-gap: 10px;
