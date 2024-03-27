@@ -29,7 +29,7 @@ nav {
     align-self: center;
 }
 
-.searchbox button{
+.searchbox button {
     height: 56px;
     width: 55px;
     border: none;
@@ -94,12 +94,15 @@ nav {
 /* Slider */
 
 .slide__container {
-    padding: 2rem;
+    padding: 0.7rem;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-left: 4px;
 }
 .slider-wrapper {
     display: grid;
     position: relative;
-    max-width: 48rem;
+    max-width: 45rem;
     /* margin: 0 auto; */
 }
 .slider {
@@ -142,17 +145,17 @@ nav {
     grid-gap: 10px;
 }
 
-.product__container{
+.product__container {
     grid-template-columns: repeat(5, auto);
-    margin: 0 10px;
+    margin: 0 15px;
 }
 
-.product__container img{
+.product__container img {
     height: 200px;
     width: 260px;
 }
 
-.product__container button{
+.product__container button {
     border-radius: 4px;
     padding: 7px;
     margin-bottom: 3%;
