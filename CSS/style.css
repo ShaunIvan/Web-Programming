@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial;
+    font-family: "Jost";
 }
 
 /* Logo */
@@ -178,6 +178,11 @@ nav {
     margin: 0 15px;
     overflow: hidden;
 }
+/* .product__container a:hover {
+    transform: scale(95%);
+    transition: 0.3s;
+    box-shadow: 5px 10px 15px rgb(71, 71, 71);
+} */
 
 .product__container img {
     height: 200px;
@@ -201,7 +206,11 @@ nav {
     padding: 6px;
     text-decoration: none;
 }
-.item-style a:hover {
-    background-color: #57C261;
-    transform: scale(20%);
+
+.item-style a:hover{
+    transform: scale(95%);
+    transition: 0.3s;
+    box-shadow: 5px 10px 15px rgb(71, 71, 71);
 }
+
+
