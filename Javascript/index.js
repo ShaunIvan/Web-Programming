@@ -5,6 +5,8 @@ function myFunction() {
     addCartBtn[i].addEventListener("click", addToCart);
   }
 
+  //anchor link array
+
   const searchButton = document.querySelector(".searchbox button");
   const searchInput = document.querySelector(".searchbox input");
   const items = document.querySelectorAll(".grid.product__container > div");
