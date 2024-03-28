@@ -16,7 +16,9 @@
   <body>
     <nav>
       <div class="logo">
-        <h1>Logo</h1>
+        <a href="index.html">
+          <h1>Logo</h1>
+        </a>
       </div>
 
       <div class="searchbox">
@@ -38,7 +40,7 @@
       </div>
       <div class="grid cart">
         <div class="grid cart__container">
-          <div class="cart__items">
+          <!-- <div class="cart__items">
             <input type="checkbox" />
             <img src="./IMG/item1.png" alt="" class="product__image" />
             <p class="item__name">Gaming monitor 100hz</p>
@@ -50,46 +52,7 @@
             </div>
             <label for="item__quantity">Quantity:</label>
             <input type="number" min="1" value="1" class="item__quantity" />
-          </div>
-          <div class="cart__items">
-            <input type="checkbox" />
-            <img src="./IMG/item1.png" alt="" class="product__image" />
-            <p class="item__name">Gaming monitor 100hz</p>
-            <div class="price--delete">
-              <p class="product__price">$100.00</p>
-              <button class="deletebtn">
-                <img class="deletebtn-img" src="./IMG/trashbin.png" alt="" />
-              </button>
-            </div>
-            <label for="item__quantity">Quantity:</label>
-            <input type="number" min="1" value="1" class="item__quantity" />
-          </div>
-          <div class="cart__items">
-            <input type="checkbox" />
-            <img src="./IMG/item1.png" alt="" class="product__image" />
-            <p class="item__name">Gaming monitor 100hz</p>
-            <div class="price--delete">
-              <p class="product__price">$100.00</p>
-              <button class="deletebtn">
-                <img class="deletebtn-img" src="./IMG/trashbin.png" alt="" />
-              </button>
-            </div>
-            <label for="item__quantity">Quantity:</label>
-            <input type="number" min="1" value="1" class="item__quantity" />
-          </div>
-          <div class="cart__items">
-            <input type="checkbox" />
-            <img src="./IMG/item1.png" alt="" class="product__image" />
-            <p class="item__name">Gaming monitor 100hz</p>
-            <div class="price--delete">
-              <p class="product__price">$100.00</p>
-              <button class="deletebtn">
-                <img class="deletebtn-img" src="./IMG/trashbin.png" alt="" />
-              </button>
-            </div>
-            <label for="item__quantity">Quantity:</label>
-            <input type="number" min="1" value="1" class="item__quantity" />
-          </div>
+          </div> -->
         </div>
 
         <div class="order">
@@ -101,18 +64,19 @@
               <p>Subtotal (1 item/s)</p>
               <p>Shipping Fee</p>
             </div>
-            <div class="subtotal_price">
-              <p>$100.00</p>
-              <p>$0.00</p>
+            <div class="subtotal_price cart-total">
+              <span id="cartTotal">₱ 0.00</span>
+              <p>₱0.00</p>
             </div>
           </div>
           <div class="grid price__section">
             <p>Total Amount</p>
-            <p class="subtotal_price">$100.00</p>
+            <p class="subtotal_price">₱100.00</p>
           </div>
           <button id="checkoutbtn">PROCEED TO CHECKOUT(1)</button>
         </div>
       </div>
     </div>
+    <script src="./Javascript/cart.js"></script>
   </body>
 </html>
