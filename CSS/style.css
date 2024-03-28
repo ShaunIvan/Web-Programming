@@ -178,11 +178,10 @@ nav {
     margin: 0 15px;
     overflow: hidden;
 }
-/* .product__container a:hover {
-    transform: scale(95%);
-    transition: 0.3s;
-    box-shadow: 5px 10px 15px rgb(71, 71, 71);
-} */
+ .product__container a {
+    text-decoration: none;
+    color: black;
+} 
 
 .product__container img {
     height: 200px;
@@ -207,7 +206,7 @@ nav {
     text-decoration: none;
 }
 
-.item-style a:hover{
+.item-style:hover{
     transform: scale(95%);
     transition: 0.3s;
     box-shadow: 5px 10px 15px rgb(71, 71, 71);
