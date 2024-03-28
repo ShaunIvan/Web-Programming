@@ -41,24 +41,32 @@
     <!-- Advertisement slide -->
     <div class="container1">
       <div class="slide__container">
-        <div class="slider-wrapper">
-          <div class="slider">
-            <img id="slide-1" src="IMG/slideimg1.png" alt="" />
-            <img id="slide-2" src="IMG/slideimg2.png" alt="" />
-            <img id="slide-3" src="IMG/slideimg3.png" alt="" />
+        <div class="slider">
+          <div class="slider-wrapper">
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+            
+            <div class="slide first">
+              <img src="./IMG/slideimg1.png" alt="">
+            </div>
+            <div class="slide">
+              <img src=".//IMG/slideimg2.png" alt="">
+            </div>
+            <div class="slide">
+              <img src="./IMG/slideimg3.png" alt="">
+            </div>
           </div>
-
-          <div class="slider-nav">
-            <a href="#slide-1"></a>
-            <a href="#slide-2"></a>
-            <a href="#slide-3"></a> 
-          </div>
-
+        <div class="navigation-manual">
+          <label for="radio1" class="manual-btn"></label>
+          <label for="radio2" class="manual-btn"></label>
+          <label for="radio3" class="manual-btn"></label>
         </div>
+      </div>
       </div>
 
       <!-- D -->
-
+      <h1 class="product_title">PRODUCTS</h1>
       <!-- First Five Items (Monitors) -->
 
       <div class="grid product__container">
@@ -66,17 +74,17 @@
           <img class="item_image" src="IMG/item1.png" alt="" />
           <hr />
           <b>
-            <p class="item_name">Gigabyte GS27Q</p>
+            <p class="item_name">Gigabyte GS27Q <span class="category" style="display: none;">Monitor</span></p>
             <p class="item_price">₱ 19,950.00</p>
           </b>
           <button class="addToCart">ADD TO CART</button>
         </div>
-
+        
         <div id="item2">
           <img class="item_image" src="IMG/item2.png" alt="" />
           <hr />
           <b>
-            <p class="item_name">Asus ROG Strix</p>
+            <p class="item_name">Asus ROG Strix<span class="category" style="display: none;">Monitor</span></p>
             <p class="item_price">₱ 28,495.00</p>
           </b>
           <button class="addToCart">ADD TO CART</button>
@@ -86,7 +94,7 @@
           <img class="item_image" src="IMG/item3.png" alt="" />
           <hr />
           <b>
-            <p class="item_name">MSI G27C4</p>
+            <p class="item_name">MSI G27C4<span class="category" style="display: none;">Monitor</span></p>
             <p class="item_price">₱ 19,950.00</p>
           </b>
           <button class="addToCart">ADD TO CART</button>
@@ -96,7 +104,7 @@
           <img class="item_image" src="IMG/item4.png" alt="" />
           <hr />
           <b>
-            <p class="item_name">Asus VU279CFE-B</p>
+            <p class="item_name">Asus VU279CFE-B<span class="category" style="display: none;">Monitor</span></p>
             <p class="item_price">₱ 11,950.00</p>
           </b>
           <button class="addToCart">ADD TO CART</button>
@@ -106,7 +114,7 @@
           <img class="item_image" src="IMG/item5.png" alt="" />
           <hr />
           <b>
-            <p class="item_name">Samsung Odyssey G9</p>
+            <p class="item_name">Samsung Odyssey G9<span class="category" style="display: none;">Monitor</span></p>
             <p class="item_price">₱ 49,995.00</p>
           </b>
           <button class="addToCart">ADD TO CART</button>
@@ -116,7 +124,7 @@
             <img class="item_image" src="IMG/item6.png" alt="" />
             <hr />
             <b>
-              <p class="item_name">Keychron K6</p>
+              <p class="item_name">Keychron K6<span class="category" style="display: none;">Keyboard</span></p>
               <p class="item_price">₱ 4,190.00</p>
             </b>
             <button class="addToCart">ADD TO CART</button>
@@ -126,7 +134,7 @@
             <img class="item_image" src="IMG/item7.png" alt="" />
             <hr />
             <b>
-              <p class="item_name">AKKO ACR PRO 68</p>
+              <p class="item_name">AKKO ACR PRO 68<span class="category" style="display: none;">Keyboard</span></p>
               <p class="item_price">₱ 5,475.00</p>
             </b>
             <button class="addToCart">ADD TO CART</button>
@@ -136,7 +144,7 @@
             <img class="item_image" src="IMG/item8.png" alt="" />
             <hr />
             <b>
-              <p class="item_name">AKKO PC75B Plus V2</p>
+              <p class="item_name">AKKO PC75B Plus V2<span class="category" style="display: none;">Keyboard</span></p>
               <p class="item_price">₱ 5,995.00</p>
             </b>
             <button class="addToCart">ADD TO CART</button>
@@ -146,7 +154,7 @@
             <img class="item_image" src="IMG/item9.png" alt="" />
             <hr />
             <b>
-              <p class="item_name">Redragon Elf Pro Wireless Crystal</p>
+              <p class="item_name">Redragon Elf Pro Wireless Crystal<span class="category" style="display: none;">Keyboard</span></p>
               <p class="item_price">₱ 3,395.00</p>
             </b>
             <button class="addToCart">ADD TO CART</button>
@@ -156,7 +164,7 @@
             <img class="item_image" src="IMG/item10.png" alt="" />
             <hr />
             <b>
-              <p class="item_name">Redragon Lakshmi K606R</p>
+              <p class="item_name">Redragon Lakshmi K606R<span class="category" style="display: none;">Keyboard</span></p>
               <p class="item_price">₱ 1,095.00</p>
             </b>
             <button class="addToCart">ADD TO CART</button>
@@ -166,7 +174,7 @@
             <img class="item_image" src="IMG/item11.png" alt="" />
             <hr />
             <b>
-              <p class="item_name">Logitech Pro X Superlight Wireless</p>
+              <p class="item_name">Logitech Pro X Superlight Wireless<span class="category" style="display: none;">Mouse</span></p>
               <p class="item_price">₱ 6,450.00</p>
             </b>
             <button class="addToCart">ADD TO CART</button>
@@ -176,7 +184,7 @@
             <img class="item_image" src="IMG/item12.png" alt="" />
             <hr />
             <b>
-                <p class="item_name">Glorious Model O 2 Pro</p>
+                <p class="item_name">Glorious Model O 2 Pro<span class="category" style="display: none;">Mouse</span></p>
                 <p class="item_price">₱ 6,450.00</p>
             </b>
             <button class="addToCart">ADD TO CART</button>
@@ -186,7 +194,7 @@
             <img class="item_image" src="IMG/item13.png" alt="" />
             <hr />
             <b>
-                  <p class="item_name">Razer Cobra Pro</p>
+                  <p class="item_name">Razer Cobra Pro<span class="category" style="display: none;">Mouse</span></p>
                   <p class="item_price">₱ 6,250.00</p>
             </b>
             <button class="addToCart">ADD TO CART</button>
@@ -196,7 +204,7 @@
             <img class="item_image" src="IMG/item14.png" alt="" />
             <hr />
             <b>
-                <p class="item_name">LOGITECH G304</p>
+                <p class="item_name">LOGITECH G304<span class="category" style="display: none;">Mouse</span></p>
                 <p class="item_price">₱ 2,066.00</p>
             </b>
             <button class="addToCart">ADD TO CART</button>
@@ -206,7 +214,7 @@
             <img class="item_image" src="IMG/item15.png" alt="" />
             <hr />
             <b>
-                <p class="item_name">Logitech G502 X</p>
+                <p class="item_name">Logitech G502 X<span class="category" style="display: none;">Mouse</span></p>
                 <p class="item_price">₱ 3,795.00</p>
             </b>
             <button class="addToCart">ADD TO CART</button>
