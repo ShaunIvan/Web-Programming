@@ -62,3 +62,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
   updateCartTotal();
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const selectAll = document.getElementById("selectAll");
+  const itemCheckBox = document.querySelectorAll(".select-item");
+
+  selectAll.addEventListener("change", function () {
+    itemCheckBox.forEach((checkbox) => {
+      checkbox.checked = this.checked;
+    });
+    updateCartTotal();
+  });
+
+  itemCheckBox.forEach((checkbox) => {
+    checkbox.addEventListener("change", () => {
+      if (!checkbox.checked) {
+        selectAll.checked = false;
+      } else {
+        const allCheck = Array.from(itemCheckBox).every((c) => c.checked);
+        selectAll.checked = allCheck;
+      }
+    });
+    updateCartTotal();
+  });
+});
