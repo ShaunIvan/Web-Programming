@@ -48,17 +48,15 @@ function myFunction() {
 
   // Product Function
 
-  function proceedToProduct(id) {
-    var itemImage = document.querySelector(`#item${id} .item_image`).innerHTML;
-    var itemName = document.querySelector(`#item${id} .item_name`).innerText;
-    var itemPrice = document.querySelector(`#item${id} .item_price`).innerText;
-    var encodedName = encodeURIComponent(itemName);
-    var encodedPrice = encodeURIComponent(itemPrice);
-
-    window.location.href = 'product_page.html?name=${encodeName}&price=${encodePrice}';
+  function proceedToProductPage(itemId) {
+    const productContainer = document.getElementById(`item${itemId}`);
+    const itemImage = productContainer.querySelector(".item_image").src;
+    const itemName = productContainer.querySelector(".item_name").textContent;
+    const itemPrice = productContainer.querySelector(".item_price").textContent;
+  
+    window.location.href = `product_page.html?name=${encodeURIComponent(itemName)}&price=${encodeURIComponent(itemPrice)}&image=${encodeURIComponent(itemImage)}`;
   }
 
-  
   // End of Product Funtion
 }
 
