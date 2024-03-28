@@ -45,6 +45,21 @@ function myFunction() {
       performSearch();
     }
   });
+
+  // Product Function
+
+  function proceedToProduct(id) {
+    var itemImage = document.querySelector(`#item${id} .item_image`).innerHTML;
+    var itemName = document.querySelector(`#item${id} .item_name`).innerText;
+    var itemPrice = document.querySelector(`#item${id} .item_price`).innerText;
+    var encodedName = encodeURIComponent(itemName);
+    var encodedPrice = encodeURIComponent(itemPrice);
+
+    window.location.href = 'product_page.html?name=${encodeName}&price=${encodePrice}';
+  }
+
+  
+  // End of Product Funtion
 }
 
 function addToCart(event) {
@@ -77,4 +92,5 @@ function addToCart(event) {
 
 function logout() {
   alert("Logged out successfully!");
+  console.log(window.Function);
 }
