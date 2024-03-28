@@ -19,6 +19,7 @@ nav {
     position: relative;
     text-align: center;
     padding: 15px 30px;
+    overflow: hidden;
 }
 
 /* Search Box */
@@ -175,6 +176,7 @@ nav {
 .product__container {
     grid-template-columns: repeat(5, auto);
     margin: 0 15px;
+    overflow: hidden;
 }
 
 .product__container img {
