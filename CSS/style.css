@@ -204,6 +204,7 @@ nav {
     border-radius: 5px;
     padding: 6px;
     text-decoration: none;
+    transition: 0.3s;
 }
 
 .item-style:hover{

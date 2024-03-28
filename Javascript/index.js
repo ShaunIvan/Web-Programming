@@ -49,18 +49,21 @@ function myFunction() {
 
 function addToCart(event) {
   var button = event.target;
-  var parentContainer = button.parentElement;
+  var parentContainer = button.closest(".item-style");
 
-  var itemImage = parentContainer.getElementsByClassName("item_image")[0].src;
-  var itemName =
-    parentContainer.getElementsByClassName("item_name")[0].textContent;
-  var itemPrice =
-    parentContainer.getElementsByClassName("item_price")[0].textContent;
+  var itemImage = parentContainer.querySelector(".item_image").src;
+  var itemName = parentContainer.querySelector(".item_name").textContent;
+  var itemPrice = parentContainer.querySelector(".item_price").textContent;
+
+  var dataPrice = parentContainer
+    .querySelector(".item_price")
+    .getAttribute("data-price");
 
   let itemDetails = {
     image: itemImage,
     name: itemName,
     price: itemPrice,
+    dataP: dataPrice,
   };
 
   let product_items = JSON.parse(localStorage.getItem("product_items")) || [];
