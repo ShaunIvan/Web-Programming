@@ -10,9 +10,11 @@
 
      <!-- Logo  -->
      <nav>
-        <div class="logo">
-            <h1>Logo</h1>
-        </div>
+        <a class="logo" href="index.html">
+            <div class="logo">
+              <h1>Logo</h1>
+            </div>
+          </a>
 
     <!-- Navigation Search Box -->
         <div class="searchbox">
@@ -33,19 +35,23 @@
     <!-- Contents -->
     <div class="container1">
 
-       <p></p>
+        <div id="item1">
+            <img class="item_image" src="IMG/item1.png" alt="" />
+          </div>
+
+          <div class="item_description">
+            <b>
+                <p class="item_name">Gigabyte GS27Q</p>
+                <p class="item_price">₱ 19,950.00</p>
+              </b>
+              <label for="item__quantity">Quantity</label>
+              <input type="number" min="1" value="1" class="item__quantity" /><br><br>
+              <button class="addToCart">ADD TO CART</button>
+              <button class="buy__button">BUY NOW</button>
+
+          </div>
 
     </div>
-
-    <div id="item1">
-        <img class="item_image" src="IMG/item1.png" alt="" />
-        <hr />
-        <b>
-          <p class="item_name">Gigabyte GS27Q</p>
-          <p class="item_price">₱ 19,950.00</p>
-        </b>
-        <button class="addToCart">ADD TO CART</button>
-      </div>
 
     
 </body>

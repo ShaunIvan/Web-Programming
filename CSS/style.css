@@ -7,9 +7,9 @@ body {
 /* Logo */
 
 .logo {
-    
+    color: white;
+    text-decoration: none;
 }
-
 
 /* Navigation */
 
@@ -140,7 +140,7 @@ nav {
 
 /* Items */
 
-.grid{
+.grid {
     display: grid;
     grid-gap: 10px;
 }
@@ -165,80 +165,14 @@ nav {
     cursor: pointer;
 }
 
-/* Specific Items */
-
-#item1 {
+.item-style {
+    color: black;
     background-color:  white;
     border-radius: 5px;
     padding: 6px;
+    text-decoration: none;
 }
-#item2 {
-    background-color:  white;
-    border-radius: 5px;
-    padding: 6px;
-}
-#item3 {
-    background-color:  white;
-    border-radius: 5px;
-    padding: 6px;
-}
-#item4 {
-    background-color:  white;
-    border-radius: 5px;
-    padding: 6px;
-}
-#item5 {
-    background-color:  white;
-    border-radius: 5px;
-    padding: 6px;
-}
-#item6 {
-    background-color:  white;
-    border-radius: 5px;
-    padding: 6px;
-}
-#item7 {
-    background-color:  white;
-    border-radius: 5px;
-    padding: 6px;
-}
-#item8 {
-    background-color:  white;
-    border-radius: 5px;
-    padding: 6px;
-}
-#item9 {
-    background-color:  white;
-    border-radius: 5px;
-    padding: 6px;
-}
-#item10 {
-    background-color:  white;
-    border-radius: 5px;
-    padding: 6px;
-}
-#item11 {
-    background-color:  white;
-    border-radius: 5px;
-    padding: 6px;
-}
-#item12 {
-    background-color:  white;
-    border-radius: 5px;
-    padding: 6px;
-}
-#item13 {
-    background-color:  white;
-    border-radius: 5px;
-    padding: 6px;
-}
-#item14 {
-    background-color:  white;
-    border-radius: 5px;
-    padding: 6px;
-}
-#item15 {
-    background-color:  white;
-    border-radius: 5px;
-    padding: 6px;
+.item-style a:hover {
+    background-color: #57C261;
+    transform: scale(20%);
 }
