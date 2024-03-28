@@ -82,6 +82,7 @@ nav {
 /* Contents */
 
 .container1 {
+    height: 100vh;
     display: flex;
     background-color: #E4E4E4;
     margin: 0 auto;
@@ -89,6 +90,7 @@ nav {
 }
 
 .item_image {
+    padding: 100px 150px;
     background-color: white;
     margin: 30px 30px;
     border-radius: 6px;
