@@ -78,8 +78,6 @@ function addToCart(event) {
   var itemImage = parentContainer.querySelector(".item_image").src;
   var itemName = parentContainer.querySelector(".item_name").textContent;
   var itemPrice = parentContainer.querySelector(".item_price").textContent;
-  var productDetails =
-    parentContainer.querySelector(".item_details").textContent;
 
   var dataPrice = parentContainer
     .querySelector(".item_price")
@@ -90,7 +88,6 @@ function addToCart(event) {
     name: itemName,
     price: itemPrice,
     dataP: dataPrice,
-    itemD: productDetails,
   };
 
   let product_items = JSON.parse(localStorage.getItem("product_items")) || [];
