@@ -1,15 +1,15 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: "Jost";
+    font-family: Arial;
 }
 
 /* Logo */
 
 .logo {
-    color: white;
-    text-decoration: none;
+    
 }
+
 
 /* Navigation */
 
@@ -19,36 +19,34 @@ nav {
     position: relative;
     text-align: center;
     padding: 15px 30px;
-    overflow: hidden;
 }
 
 /* Search Box */
 
-.searchbox {
-    display: flex;
-    margin: 0px auto 0;
-    align-self: center;
-}
-
-.searchbox button {
-    height: 56px;
-    width: 55px;
-    border: none;
-    font-size: 15px;
-    cursor: pointer;
-    color: white;
-    background-color: #204B7E;
-    border-radius: 0 5px 5px 0;
+.searchbox{
+    position: relative;
+    margin: 0 auto;
 }
 
 .searchbox input {
     outline: none;
     height: 56px;
     width: 746px;
-    padding-left: 10px;
+    padding-left: 6px;
     font-size: 15px;
+    border-radius: 5px;
+    margin-top: 6px;
+}
+
+.searchbox button{
+    color: white;
+    height: 56px;
+    width: 60px;
     border: none;
-    border-radius: 5px 0 0 5px;
+    font-size: 15px;
+    cursor: pointer;
+    background-color: #204B7E;
+    border-radius: 0 5px 5px 0;
 }
 
 /* Cart Icon */
@@ -84,15 +82,13 @@ nav {
 /* Item Container */
 
 .container1 {
+    display: grid;
     position: relative;
     border: solid 1px white;
     background-color: #E4E4E4;
     margin-top: 0%;
     margin: 0 auto;
     max-width: 1460px;
-    height: 100%;
-    padding-bottom: 40px;
-
 } 
 
 /* Slider */
@@ -170,29 +166,22 @@ nav {
 
 
 /* Items */
-
-.grid {
+.grid{
     display: grid;
     grid-gap: 10px;
 }
 
-.product__container {
+.product__container{
     grid-template-columns: repeat(5, auto);
-    margin: 0 15px;
-    overflow-x: hidden;
-    padding-right: 20px;
+    margin: 0 auto;
 }
- .product__container a {
-    text-decoration: none;
-    color: black;
-} 
 
-.product__container img {
+.product__container img{
     height: 200px;
     width: 260px;
 }
 
-.product__container button {
+.product__container button{
     border-radius: 4px;
     padding: 7px;
     margin-bottom: 3%;
@@ -202,20 +191,80 @@ nav {
     cursor: pointer;
 }
 
-.item-style {
-    color: black;
+/* Specific Items */
+
+#item1 {
     background-color:  white;
     border-radius: 5px;
     padding: 6px;
-    text-decoration: none;
-    transition: 0.3s;
 }
-
-.item-style:hover{
-    transform: scale(95%);
-    transition: 0.3s;
-    box-shadow: 5px 10px 15px rgb(71, 71, 71);
+#item2 {
+    background-color:  white;
+    border-radius: 5px;
+    padding: 6px;
 }
-
-
-
+#item3 {
+    background-color:  white;
+    border-radius: 5px;
+    padding: 6px;
+}
+#item4 {
+    background-color:  white;
+    border-radius: 5px;
+    padding: 6px;
+}
+#item5 {
+    background-color:  white;
+    border-radius: 5px;
+    padding: 6px;
+}
+#item6 {
+    background-color:  white;
+    border-radius: 5px;
+    padding: 6px;
+}
+#item7 {
+    background-color:  white;
+    border-radius: 5px;
+    padding: 6px;
+}
+#item8 {
+    background-color:  white;
+    border-radius: 5px;
+    padding: 6px;
+}
+#item9 {
+    background-color:  white;
+    border-radius: 5px;
+    padding: 6px;
+}
+#item10 {
+    background-color:  white;
+    border-radius: 5px;
+    padding: 6px;
+}
+#item11 {
+    background-color:  white;
+    border-radius: 5px;
+    padding: 6px;
+}
+#item12 {
+    background-color:  white;
+    border-radius: 5px;
+    padding: 6px;
+}
+#item13 {
+    background-color:  white;
+    border-radius: 5px;
+    padding: 6px;
+}
+#item14 {
+    background-color:  white;
+    border-radius: 5px;
+    padding: 6px;
+}
+#item15 {
+    background-color:  white;
+    border-radius: 5px;
+    padding: 6px;
+}

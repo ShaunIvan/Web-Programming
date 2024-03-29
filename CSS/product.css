@@ -4,6 +4,10 @@ body {
     font-family: Arial;
 }
 
+.logo {
+    color: white;
+    text-decoration: none;
+}
 
 /* Navigation */
 
@@ -17,30 +21,31 @@ nav {
 
 /* Search Box */
 
-.searchbox{
-    position: relative;
-    margin: 0 auto;
+.searchbox {
+    display: flex;
+    margin: 0px auto 0;
+    align-self: center;
+}
+
+.searchbox button {
+    height: 56px;
+    width: 55px;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+    color: white;
+    background-color: #204B7E;
+    border-radius: 0 5px 5px 0;
 }
 
 .searchbox input {
     outline: none;
     height: 56px;
     width: 746px;
-    padding-left: 6px;
+    padding-left: 10px;
     font-size: 15px;
-    border-radius: 5px;
-    margin-top: 6px;
-}
-
-.searchbox button{
-    color: white;
-    height: 56px;
-    width: 60px;
     border: none;
-    font-size: 15px;
-    cursor: pointer;
-    background-color: #204B7E;
-    border-radius: 0 5px 5px 0;
+    border-radius: 5px 0 0 5px;
 }
 
 /* Cart Icon */
@@ -64,6 +69,8 @@ nav {
     margin-right: 20px;
 }
 
+/* Log out */
+
 #logout {
     margin: 25px;
 }
@@ -72,11 +79,54 @@ nav {
     color: white;
 }
 
+/* Contents */
+
 .container1 {
-    position: relative;
-    border: solid 1px white;
+    height: 100vh;
+    display: flex;
     background-color: #E4E4E4;
-    margin-top: 0%;
     margin: 0 auto;
     max-width: 1460px;
+}
+
+.item_image {
+    padding: 100px 150px;
+    background-color: white;
+    margin: 30px 30px;
+    border-radius: 6px;
+    /* box-shadow: 0 5px 10px black; */
+}
+
+.item_name, .item_price, .addToCart {
+
+    /* margin-left: 650px; */
+}
+
+.addToCart {
+    color: white;
+    background-color: #204B7E;
+    padding: 10px 30px 10px 30px;
+    border: none;
+    border-radius: 5px;
+}
+.buy__button {
+    color: white;
+    background-color: #57C261;
+    padding: 10px 50px 10px 50px;
+    border: none;
+    border-radius: 5px;
+}
+
+label {
+    font-size: 20px;
+}
+input {
+    height: 25px;
+    width: 40px;
+    font-size: 15px;
+}
+
+.item_description {
+    margin-top: 20px;
+    font-size: 30px;
 } 

@@ -4,15 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="product.css">
 </head>
 <body>
 
      <!-- Logo  -->
      <nav>
-        <div class="logo">
-            <h1>Logo</h1>
-        </div>
+        <a class="logo" href="index.html">
+            <div class="logo">
+              <h1>Logo</h1>
+            </div>
+          </a>
 
     <!-- Navigation Search Box -->
         <div class="searchbox">
@@ -33,10 +41,24 @@
     <!-- Contents -->
     <div class="container1">
 
-       <p>asdfg</p>
+        <div id="item1">
+            <img class="item_image" src="" alt="" />
+          </div>
+
+          <div class="item_description">
+            <b>
+                <p class="item_name"></p>
+                <p class="item_price"></p>
+              </b>
+              <input type="number" min="1" value="1" class="item__quantity" /><br><br>
+              <button class="addToCart">ADD TO CART</button>
+              <button class="buy__button">BUY NOW</button>
+
+          </div>
 
     </div>
 
-    
+    <script src="Javascript/product.js"></script>
 </body>
+
 </html>
