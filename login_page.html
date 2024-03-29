@@ -27,29 +27,29 @@
     <!-- Contents -->
     <div class="containerLogin">
         <h2>LOGIN</h2>
-
     </div>
+    
     <div class="container1">
 
         <div class="slide__container">
-            <form>
-                <label for="username_input">Username</label>
-                <input type="text" class="username_input">
-                <br>
-                <br>
-                <label for="password_input">Password</label>
-                <input type="password" class="password_input">
-                <br>
-                <br>
-                <button type="submit">Login</button>
-                <div class="smallcontainer">
-                    <label>New Member? </label>
-                    <a href="signin_page.html">Register Here!</a>
-                </div>
 
-             </form>
+            <label for="username_input">Username</label>
+            <input type="text" id="username_input">
+            <br><br>
+            <label for="password_input">Password</label>
+            <input type="password" id="password_input">
+            <br><br>
+            <button onclick="login()" id="loginbutton" type="submit">Login</button>
+                
+            <div class="smallcontainer">
+                <label>New Member? </label>
+                <a href="signin_page.html">Register Here!</a>
+            </div>
+
         </div>
+
     </div>
     
+    <script src="./Javascript/login.js"></script>
 </body>
 </html>
