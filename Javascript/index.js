@@ -19,10 +19,9 @@ function myFunction() {
       // Search both in item names and categories
       const itemName = item
         .querySelector(".item_name")
-        .textContent.trim()
-        .toLowerCase();
+        .textContent.toLowerCase();
       const itemCategory = item.querySelector(".category")
-        ? item.querySelector(".category").textContent.trim().toLowerCase()
+        ? item.querySelector(".category").textContent.toLowerCase()
         : "";
 
       if (itemName.includes(searchText) || itemCategory.includes(searchText)) {
@@ -42,6 +41,7 @@ function myFunction() {
   searchButton.addEventListener("click", performSearch);
   searchInput.addEventListener("keypress", function (event) {
     if (event.key === "Enter") {
+      event.preventDefault();
       performSearch();
     }
   });
@@ -53,8 +53,12 @@ function myFunction() {
     const itemImage = productContainer.querySelector(".item_image").src;
     const itemName = productContainer.querySelector(".item_name").textContent;
     const itemPrice = productContainer.querySelector(".item_price").textContent;
-  
-    window.location.href = `product_page.html?name=${encodeURIComponent(itemName)}&price=${encodeURIComponent(itemPrice)}&image=${encodeURIComponent(itemImage)}`;
+
+    window.location.href = `product_page.html?name=${encodeURIComponent(
+      itemName
+    )}&price=${encodeURIComponent(itemPrice)}&image=${encodeURIComponent(
+      itemImage
+    )}`;
   }
 
   // End of Product Funtion
