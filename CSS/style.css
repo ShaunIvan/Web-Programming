@@ -30,6 +30,10 @@ nav {
     align-self: center;
 }
 
+.searchbox img {
+    height: 25px;
+}
+
 .searchbox button {
     height: 56px;
     width: 55px;
