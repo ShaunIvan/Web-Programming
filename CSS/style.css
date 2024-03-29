@@ -90,6 +90,9 @@ nav {
     margin-top: 0%;
     margin: 0 auto;
     max-width: 1460px;
+    height: 100%;
+    padding-bottom: 40px;
+
 } 
 
 /* Slider */
@@ -176,7 +179,8 @@ nav {
 .product__container {
     grid-template-columns: repeat(5, auto);
     margin: 0 15px;
-    overflow: hidden;
+    overflow-x: hidden;
+    padding-right: 20px;
 }
  .product__container a {
     text-decoration: none;

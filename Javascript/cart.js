@@ -86,3 +86,5 @@ document.addEventListener("DOMContentLoaded", () => {
     updateCartTotal();
   });
 });
+
+document.addEventListener()
