@@ -38,6 +38,10 @@ nav {
     border-radius: 0 5px 5px 0;
 }
 
+.searchbox img {
+    height: 25px;
+}
+
 .searchbox input {
     outline: none;
     height: 56px;
@@ -102,6 +106,10 @@ nav {
     /* margin-left: 650px; */
 }
 
+.item_price {
+    font-size: 20px;
+}
+
 .addToCart {
     color: white;
     background-color: #204B7E;
@@ -130,3 +138,9 @@ input {
     margin-top: 20px;
     font-size: 30px;
 } 
+.item_description img {
+    height: 20px;
+}
+.item_description button {
+    margin-top: 10px;
+}
