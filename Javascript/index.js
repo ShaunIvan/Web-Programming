@@ -37,8 +37,8 @@ function myFunction() {
       });
     }
   }
-
   searchButton.addEventListener("click", performSearch);
+  
   searchInput.addEventListener("keypress", function (event) {
     if (event.key === "Enter") {
       event.preventDefault();

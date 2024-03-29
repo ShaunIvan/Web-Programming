@@ -38,37 +38,18 @@ function updateCart() {
 
 function updateCartTotal() {
   const cartItems = document.querySelectorAll(".cart__items");
-  let subtotal = 0;
   let total = 0;
-  let shippingTotal = 0;
-  let itemCheckOutQty = 0;
 
   cartItems.forEach((item) => {
     const isChecked = item.querySelector(".select-item").checked;
     if (isChecked) {
-      const quantity = parseInt(item.querySelector(".item__quantity").value);
+      const quantity = item.querySelector(".item__quantity").value;
       const price = parseFloat(
         item.querySelector(".product__price").getAttribute("data-price")
       );
-
-      itemCheckOutQty += quantity;
-      shippingTotal += 160;
-      subtotal += price * quantity;
-      total += shippingTotal + price * quantity;
+      total += price * quantity;
     }
   });
-
-  const subTotalFormat = new Intl.NumberFormat("en-us", {
-    style: "currency",
-    currency: "PHP",
-    minimumFractionDigits: 2,
-  }).format(subtotal);
-
-  const shippingTotalFormat = new Intl.NumberFormat("en-us", {
-    style: "currency",
-    currency: "PHP",
-    minimumFractionDigits: 2,
-  }).format(shippingTotal);
 
   const totalFormat = new Intl.NumberFormat("en-us", {
     style: "currency",
@@ -76,30 +57,21 @@ function updateCartTotal() {
     minimumFractionDigits: 2,
   }).format(total);
 
-  document.getElementById("cartTotal").textContent = subTotalFormat;
-  document.getElementById("shippingFee").textContent = shippingTotalFormat;
-  document.getElementById("totalPrice").textContent = totalFormat;
-  document
-    .querySelectorAll(".itemQty")
-    .forEach((el) => (el.textContent = itemCheckOutQty));
+  document.getElementById("cartTotal").textContent = totalFormat;
 }
 
 function checkboxAndQuantity() {
-  const itemCheckBox = document.querySelectorAll(".select-item");
-  const quantity = document.querySelectorAll(".item__quantity");
+  const select_product = document.querySelectorAll(".select-item");
   const selectAll = document.getElementById("selectAll");
+  const quantity = document.querySelectorAll(".item__quantity");
 
-  itemCheckBox.forEach((checkbox) => {
-    checkbox.addEventListener("change", function () {
-      if (!this.checked) {
-        selectAll.checked = false;
-      } else {
-        selectAll.checked = Array.from(itemCheckBox).every((c) => c.checked);
-      }
-      updateCartTotal();
-    });
+  select_product.forEach((checkbox) => {
+    checkbox.addEventListener("change", updateCartTotal);
   });
 
+  quantity.forEach((input) => {
+    input.addEventListener("change", updateCartTotal);
+  });
   selectAll.addEventListener("change", function () {
     itemCheckBox.forEach((checkbox) => {
       checkbox.checked = this.checked;
@@ -107,8 +79,16 @@ function checkboxAndQuantity() {
     updateCartTotal();
   });
 
-  quantity.forEach((input) => {
-    input.addEventListener("change", updateCartTotal);
+  itemCheckBox.forEach((checkbox) => {
+    checkbox.addEventListener("change", () => {
+      if (!checkbox.checked) {
+        selectAll.checked = false;
+      } else {
+        const allCheck = Array.from(itemCheckBox).every((c) => c.checked);
+        selectAll.checked = allCheck;
+      }
+    });
+    updateCartTotal();
   });
 
   updateCartTotal();
@@ -149,4 +129,44 @@ function removeItem(index) {
   modalOverlay.style.display = "none";
   document.querySelector(".confirmPop").innerHTML = "";
   updateCart();
+}
+
+function selectAndQuantity() {
+  const select_product = document.querySelectorAll(".select-item");
+  const quantity = document.querySelectorAll(".item__quantity");
+
+  select_product.forEach((checkbox) => {
+    checkbox.addEventListener("change", updateCartTotal);
+  });
+
+  quantity.forEach((input) => {
+    input.addEventListener("change", updateCartTotal);
+  });
+
+  selectAll();
+  updateCartTotal();
+}
+
+function selectAll() {
+  const selectAll = document.getElementById("selectAll");
+  const itemCheckBox = document.querySelectorAll(".select-item");
+
+  selectAll.addEventListener("change", function () {
+    itemCheckBox.forEach((checkbox) => {
+      checkbox.checked = this.checked;
+    });
+    updateCartTotal();
+  });
+
+  itemCheckBox.forEach((checkbox) => {
+    checkbox.addEventListener("change", () => {
+      if (!checkbox.checked) {
+        selectAll.checked = false;
+      } else {
+        const allCheck = Array.from(itemCheckBox).every((c) => c.checked);
+        selectAll.checked = allCheck;
+      }
+    });
+    updateCartTotal();
+  });
 }
