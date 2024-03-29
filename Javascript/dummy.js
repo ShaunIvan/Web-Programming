@@ -1,172 +1,38 @@
 document.addEventListener("DOMContentLoaded", () => {
-  updateCart();
+  const urlParams = new URLSearchParams(window.location.search);
+  const name = urlParams.get("name");
+  const price = urlParams.get("price");
+  const image = urlParams.get("image");
+
+  document.querySelector(".item_name").textContent = decodeURIComponent(name);
+  document.querySelector(".item_price").textContent = `₱ ${parseFloat(
+    decodeURIComponent(price)
+  ).toFixed(2)}`;
+  document.querySelector(".item_image").src = decodeURIComponent(image);
 });
 
-function updateCart() {
-  const cartContainer = document.querySelector(".cart__container");
-  const items = JSON.parse(localStorage.getItem("product_items")) || [];
 
-  cartContainer.innerHTML = "";
+// Product Function
 
-  items.forEach((item, index) => {
-    const itemElement = document.createElement("div");
-    itemElement.classList.add("cart__items");
-    itemElement.innerHTML = `
-                <input type="checkbox" class="select-item"/>
-                <img src="${item.image}" alt="" class="product__image" />
-                <p class="item__name">${item.name}</p>
-                <div class="price--delete">
-                    <p class="product__price" data-price="${item.dataP}">${item.price}</p>
-                    <button class="deletebtn">
-                    <img class="deletebtn-img" src="./IMG/trashbin.png" alt="" />
-                    </button>
-                </div>
-                <label for="item__quantity">Quantity:</label>
-                <input type="number" min="1" value="1" class="item__quantity" />
-            `;
-    cartContainer.appendChild(itemElement);
-    itemElement
-      .querySelector(".deletebtn")
-      .addEventListener("click", function () {
-        showDeletePrompt(index);
-      });
-  });
+  //  document.querySelectorAll('.product'),forEach(item => {
+  //    item.addEventListener('click', () => {
+  //      localStorage.setItem('item_image', item.getAttribute('date-image'));
+  //      localStorage.setItem('item_name', item.getAttribute('date-name'));
+  //      localStorage.setItem('item_price' item.getAttribute('data-price'));
+  //      window.location.href = 'product_page.html';
+  //    })
+  //  })
 
-  checkboxAndQuantity();
-  updateCartTotal();
-}
+  //  function proceedToProductPage(itemId) {
+  //    const productContainer = document.getElementById(`item${itemId}`);
+  //    const itemImage = productContainer.querySelector(".item_image").src;
+  //    const itemName = productContainer.querySelector(".item_name").textContent;
+  //    const itemPrice = productContainer.querySelector(".item_price").textContent
+  //    window.location.href = `product_page.html?name=${encodeURIComponent(
+  //      itemName
+  //    )}&price=${encodeURIComponent(itemPrice)}&image=${encodeURIComponent(
+  //      itemImage
+  //    )}`;
+  //  }
 
-function updateCartTotal() {
-  const cartItems = document.querySelectorAll(".cart__items");
-  let total = 0;
-
-  cartItems.forEach((item) => {
-    const isChecked = item.querySelector(".select-item").checked;
-    if (isChecked) {
-      const quantity = item.querySelector(".item__quantity").value;
-      const price = parseFloat(
-        item.querySelector(".product__price").getAttribute("data-price")
-      );
-      total += price * quantity;
-    }
-  });
-
-  const totalFormat = new Intl.NumberFormat("en-us", {
-    style: "currency",
-    currency: "PHP",
-    minimumFractionDigits: 2,
-  }).format(total);
-
-  document.getElementById("cartTotal").textContent = totalFormat;
-}
-
-function checkboxAndQuantity() {
-  const select_product = document.querySelectorAll(".select-item");
-  const selectAll = document.getElementById("selectAll");
-  const quantity = document.querySelectorAll(".item__quantity");
-
-  select_product.forEach((checkbox) => {
-    checkbox.addEventListener("change", updateCartTotal);
-  });
-
-  quantity.forEach((input) => {
-    input.addEventListener("change", updateCartTotal);
-  });
-  selectAll.addEventListener("change", function () {
-    itemCheckBox.forEach((checkbox) => {
-      checkbox.checked = this.checked;
-    });
-    updateCartTotal();
-  });
-
-  itemCheckBox.forEach((checkbox) => {
-    checkbox.addEventListener("change", () => {
-      if (!checkbox.checked) {
-        selectAll.checked = false;
-      } else {
-        const allCheck = Array.from(itemCheckBox).every((c) => c.checked);
-        selectAll.checked = allCheck;
-      }
-    });
-    updateCartTotal();
-  });
-
-  updateCartTotal();
-}
-
-function showDeletePrompt(index) {
-  const modalOverlay = document.getElementById("modalOverlay");
-  modalOverlay.style.display = "block";
-
-  const confirmPop = document.querySelector(".confirmPop");
-  confirmPop.innerHTML = `
-        <div class='confirmation'>
-            <h1>Remove From Checkout?</h1>
-            <p>Item(s) will be removed from order</p>
-            <div class="button_container">
-                <button class="cancelBtn">Cancel</button>
-                <button class="removeBtn">Remove</button>
-            </div>
-        </div>
-    `;
-
-  document.querySelector(".removeBtn").addEventListener("click", function () {
-    removeItem(index);
-  });
-
-  document.querySelector(".cancelBtn").addEventListener("click", function () {
-    confirmPop.innerHTML = "";
-    modalOverlay.style.display = "none";
-  });
-}
-
-function removeItem(index) {
-  let items = JSON.parse(localStorage.getItem("product_items")) || [];
-  items.splice(index, 1);
-  localStorage.setItem("product_items", JSON.stringify(items));
-
-  const modalOverlay = document.getElementById("modalOverlay");
-  modalOverlay.style.display = "none";
-  document.querySelector(".confirmPop").innerHTML = "";
-  updateCart();
-}
-
-function selectAndQuantity() {
-  const select_product = document.querySelectorAll(".select-item");
-  const quantity = document.querySelectorAll(".item__quantity");
-
-  select_product.forEach((checkbox) => {
-    checkbox.addEventListener("change", updateCartTotal);
-  });
-
-  quantity.forEach((input) => {
-    input.addEventListener("change", updateCartTotal);
-  });
-
-  selectAll();
-  updateCartTotal();
-}
-
-function selectAll() {
-  const selectAll = document.getElementById("selectAll");
-  const itemCheckBox = document.querySelectorAll(".select-item");
-
-  selectAll.addEventListener("change", function () {
-    itemCheckBox.forEach((checkbox) => {
-      checkbox.checked = this.checked;
-    });
-    updateCartTotal();
-  });
-
-  itemCheckBox.forEach((checkbox) => {
-    checkbox.addEventListener("change", () => {
-      if (!checkbox.checked) {
-        selectAll.checked = false;
-      } else {
-        const allCheck = Array.from(itemCheckBox).every((c) => c.checked);
-        selectAll.checked = allCheck;
-      }
-    });
-    updateCartTotal();
-  });
-}
+  // End of Product Funtion
