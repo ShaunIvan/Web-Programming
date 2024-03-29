@@ -11,15 +11,27 @@ function login()
     console.log('test');
     const username = document.getElementById("username_input").value
     const password = document.getElementById("password_input").value
+    let userusername = sessionStorage.getItem("user_username");
+    let userpassword = sessionStorage.getItem("user_password");
+
 
     if (username === "CSELEC03" && password === "webprog")
     {
-        sessionStorage.setItem("isLoggedIn", true)
-        sessionStorage.setItem("username", username)
-
         window.location.href = "./index.html"
+        sessionStorage.setItem("logged", true)
     }
     
-else { alert ("Invalid Username or password. Please try again")}
-    console.log(username);
+    else if (userusername == username, userpassword == password)
+    {
+        let userusername = sessionStorage.getItem("user_username");
+        let userpassword = sessionStorage.getItem("user_password");
+        window.location.href = "./index.html"
+        sessionStorage.setItem("logged", true)
+    }
+    
+    else 
+    { 
+        alert ("Invalid Username or password. Please try again")    
+    }
+    
 }
