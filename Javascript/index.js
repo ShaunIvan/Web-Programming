@@ -1,6 +1,10 @@
 function myFunction() {
   var addCartBtn = document.getElementsByClassName("addToCart");
-  
+  var productLink = document.getElementsByClassName("productlink");
+
+  for (var i = 0; i < productLink.length; i++) {
+    productLink[i].addEventListener("click", nextPage);
+  }
 
   for (var i = 0; i < addCartBtn.length; i++) {
     addCartBtn[i].addEventListener("click", addToCart);
@@ -39,50 +43,32 @@ function myFunction() {
     }
   }
   searchButton.addEventListener("click", performSearch);
-  
+
   searchInput.addEventListener("keypress", function (event) {
     if (event.key === "Enter") {
       event.preventDefault();
       performSearch();
     }
   });
+}
 
-  // Product Function
+function nextPage(event) {
+  event.preventDefault(); // Prevent the default anchor action
+  var parentContainer = event.target.closest(".item-style");
 
-  function proceedToProductPage(itemId) {
-    // Note: Ensure that the item ID passed matches the item's actual ID in the DOM
-    const productContainer = document.getElementById(`item${itemId}`);
-    const itemImage = productContainer.querySelector(".item_image").src;
-    const itemName = productContainer.querySelector(".item_name").textContent;
-    // Ensure this gets the `data-price` attribute correctly
-    const itemPrice = productContainer.querySelector(".item_price").getAttribute("data-price");
-  
-    window.location.href = `product_page.html?name=${encodeURIComponent(itemName)}&price=${encodeURIComponent(itemPrice)}&image=${encodeURIComponent(itemImage)}`;
-  }
+  var itemDetails = {
+    image: parentContainer.querySelector(".item_image").src,
+    name: parentContainer.querySelector(".item_name").textContent,
+    price: parentContainer.querySelector(".item_price").textContent,
+    details: parentContainer.querySelector(".item_details")
+      ? parentContainer.querySelector(".item_details").textContent
+      : "",
+  };
 
-  //  document.querySelectorAll('.product'),forEach(item => {
-  //    item.addEventListener('click', () => {
-  //      localStorage.setItem('item_image', item.getAttribute('date-image'));
-  //      localStorage.setItem('item_name', item.getAttribute('date-name'));
-  //      localStorage.setItem('item_price' item.getAttribute('data-price'));
-  //      window.location.href = 'product_page.html';
-  //    })
-  //  })
+  localStorage.setItem("productItem", JSON.stringify(itemDetails));
 
-  //  function proceedToProductPage(itemId) {
-  //    const productContainer = document.getElementById(`item${itemId}`);
-  //    const itemImage = productContainer.querySelector(".item_image").src;
-  //    const itemName = productContainer.querySelector(".item_name").textContent;
-  //    const itemPrice = productContainer.querySelector(".item_price").textContent
-  //    window.location.href = `product_page.html?name=${encodeURIComponent(
-  //      itemName
-  //    )}&price=${encodeURIComponent(itemPrice)}&image=${encodeURIComponent(
-  //      itemImage
-  //    )}`;
-  //  }
-
-  // End of Product Funtion
-  proceedToProductPage();
+  // Navigate to the product page
+  window.location.href = "product_page.html";
 }
 
 function addToCart(event) {
@@ -92,6 +78,8 @@ function addToCart(event) {
   var itemImage = parentContainer.querySelector(".item_image").src;
   var itemName = parentContainer.querySelector(".item_name").textContent;
   var itemPrice = parentContainer.querySelector(".item_price").textContent;
+  var productDetails =
+    parentContainer.querySelector(".item_details").textContent;
 
   var dataPrice = parentContainer
     .querySelector(".item_price")
@@ -102,6 +90,7 @@ function addToCart(event) {
     name: itemName,
     price: itemPrice,
     dataP: dataPrice,
+    itemD: productDetails,
   };
 
   let product_items = JSON.parse(localStorage.getItem("product_items")) || [];
@@ -120,3 +109,4 @@ function logout() {
   alert("Logged out successfully!");
   console.log(window.Function);
 }
+
