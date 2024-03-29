@@ -33,6 +33,7 @@ function updateCart() {
   });
 
   checkboxAndQuantity();
+  commandDelete();
   updateCartTotal();
 }
 
@@ -149,4 +150,65 @@ function removeItem(index) {
   modalOverlay.style.display = "none";
   document.querySelector(".confirmPop").innerHTML = "";
   updateCart();
+}
+
+function commandDelete() {
+  const deleteAllBtn = document.querySelector(".command_deleteBtn");
+  deleteAllBtn.addEventListener("click", deleteSelected);
+}
+
+function deleteSelected() {
+  const checkedItem = document.querySelectorAll(
+    ".cart__items .select-item:checked"
+  );
+  const modalOverlay = document.getElementById("modalOverlay");
+  modalOverlay.style.display = "block";
+  const confirmPop = document.querySelector(".confirmPop");
+  if (checkedItem.length === 0) {
+    confirmPop.innerHTML = `
+        <div class='confirmation errorDelete'>
+            <p>Please Select An Item to Delete</p>
+        </div>
+    `;
+    setTimeout(() => {
+      confirmPop.innerHTML = "";
+      modalOverlay.style.display = "none";
+    }, 1500);
+    return;
+  } else {
+    // Show confirmation dialog for deletion
+    confirmPop.innerHTML = `
+      <div class='confirmation selected_confirm'>
+          <h1>Remove Selected Items From Checkout?</h1>
+          <p>The selected items will be removed from your order.</p>
+          <div class="button_container">
+              <button class="cancelBtn">Cancel</button>
+              <button class="removeBtn">Remove</button>
+          </div>
+      </div>
+    `;
+    modalOverlay.style.display = "block";
+
+    document.querySelector(".cancelBtn").addEventListener("click", function () {
+      confirmPop.innerHTML = "";
+      modalOverlay.style.display = "none";
+    });
+
+    document
+      .querySelector(".removeBtn")
+      .addEventListener("click", function () {
+        const items = JSON.parse(localStorage.getItem("product_items")) || [];
+        // Filter out the items that are not checked, to keep them
+        const newItems = items.filter(
+          (_, index) =>
+            !document.querySelectorAll(".cart__items .select-item")[index]
+              .checked
+        );
+
+        localStorage.setItem("product_items", JSON.stringify(newItems));
+        confirmPop.innerHTML = ""; // Clear confirmation dialog
+        modalOverlay.style.display = "none"; // Hide overlay
+        updateCart(); // Re-render the cart items
+      });
+  }
 }
