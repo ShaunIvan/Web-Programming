@@ -25,7 +25,7 @@ label{
 
 /* Input */
 input[type=text], input[type=password]{
-    width: 100%;
+  width: 300px;
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
@@ -37,10 +37,10 @@ button {
     background-color: #04AA6D;
     color: white;
     padding: 14px 20px;
-    margin: 8px 0;
+    margin: 8px 0 0;
     border: none;
     cursor: pointer;
-    width: 100%;
+    width: 300px;
   }
 
 /* Navigation */
@@ -61,7 +61,7 @@ nav {
 .containerLogin{
     padding: 0px;
     border: solid 1px rgb(255, 255, 255);
-    background-color: #e4e4e4;
+    background-color: #ffffff;
     margin-top: 10%;
     margin-left: 40%;
     margin-right: 40%;
@@ -77,13 +77,33 @@ h2 {
 .container1 {
     padding: 20px;
     border: solid 1px rgb(255, 255, 255);
-    background-color: #e4e4e4;
+    background-color: #ffffff;
     margin-top: 2%;
     margin-left: 40%;
     margin-right: 40%;
 } 
 
+.smallcontainer{    
+    border: solid 1px rgb(255, 255, 255);
+    background-color: white;
+    display: flex;
+    justify-content: flex-end;
+    gap: 5px;
+    padding-right: 5px;
+}
 
+
+.sign_container{
+    padding: 20px;
+    border: solid 1px rgb(0, 0, 0);
+    background-color: #ffffff;
+    margin: 0 auto;
+    width: 610px;
+
+    display: flex;
+    justify-content: space-evenly;
+
+}
 
 
 

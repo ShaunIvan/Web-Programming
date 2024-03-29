@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loginn</title>
+    <title>Register</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -11,12 +11,9 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/login_style.css">
-
 </head>
+
 <body>
-
-    
-
     <!-- Logo  -->
     <nav>
         <div class="logocenter">
@@ -25,27 +22,28 @@
     </nav>
     
     <!-- Contents -->
-    <div class="containerLogin">
-        <h2>LOGIN</h2>
-
+    <div>
+        <h2>SIGN-IN</h2>
     </div>
-    <div class="container1">
 
-        <div class="slide__container">
+    <div class="sign_container">
+        <div>
             <form>
-                <label for="username_input">Username</label>
-                <input type="text" class="username_input">
-                <br>
-                <br>
-                <label for="password_input">Password</label>
-                <input type="password" class="password_input">
-                <br>
-                <br>
-                <button type="submit">Login</button>
-                <div class="smallcontainer">
-                    <label>New Member? </label>
-                    <a href="signin_page.html">Register Here!</a>
-                </div>
+            <label for="username_input">Username</label>
+            <input type="text" id="username_input">
+            <label for="password_input">Password</label>
+            <input type="password" class="password_input">
+            <label for="password_input">Repeat Password</label>
+            <input type="password" class="password_input">
+            </form>
+        </div>
+
+        <div>
+            <form>
+                
+                <label for="fullname">Full name</label>
+                <input type="text" class="fullname">
+                <button type="submit">Register</button>
 
              </form>
         </div>
