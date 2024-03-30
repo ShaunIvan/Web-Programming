@@ -86,10 +86,14 @@ nav {
 /* Contents */
 
 .container1 {
-    display: flex;
+    position: relative;
     background-color: #E4E4E4;
     margin: 0 auto;
     max-width: 1460px;
+}
+
+.product__item{
+    display: flex;
 }
 
 .item_image {
@@ -112,6 +116,7 @@ nav {
     border: none;
     border-radius: 5px;
     margin-left: 65px;
+    cursor: pointer;
 }
 /* .buy__button {
     color: white;
@@ -137,10 +142,13 @@ input {
 } 
 .item_description img {
     height: 20px;
+    margin-bottom: 15px;
 }
 .item_description button {
-    margin-top: 10px;
-    margin-bottom: 15px;
+    margin: 0 auto;
+    /* margin-top: 10px;
+    margin-bottom: 15px; */
+    display: flex;
 }
 
 .specification {
