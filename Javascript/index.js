@@ -1,27 +1,21 @@
 document.addEventListener("DOMContentLoaded", () => {
   let logged = sessionStorage.getItem("logged");
 
-  if (logged == "true")
-  {
-    sessionStorage.setItem("logged", true)
-  }
-  else if (logged == "false"){
-    
-    alert("User not logged in, redirecting to login...")
-    window.location.href = "./login_page.html"
-  }
-  else 
-  {
-    alert("User not logged in for the first time, redirecting to login...")
-    window.location.href = "./login_page.html"
+  if (logged == "true") {
+    sessionStorage.setItem("logged", true);
+  } else if (logged == "false") {
+    alert("User not logged in, redirecting to login...");
+    window.location.href = "./login_page.html";
+  } else {
+    alert("User not logged in for the first time, redirecting to login...");
+    window.location.href = "./login_page.html";
   }
 });
 
-function logoutinstant(){
+function logoutinstant() {
   let logged = sessionStorage.getItem("logged");
-  sessionStorage.setItem ("logged", false)
+  sessionStorage.setItem("logged", false);
   window.location.reload();
-
 }
 
 function myFunction() {
@@ -90,6 +84,9 @@ function nextPage(event) {
     details: parentContainer.querySelector(".item_details")
       ? parentContainer.querySelector(".item_details").textContent
       : "",
+    dataP: parentContainer
+      .querySelector(".item_price")
+      .getAttribute("data-price"),
   };
 
   localStorage.setItem("productItem", JSON.stringify(itemDetails));
