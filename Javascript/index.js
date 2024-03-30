@@ -102,10 +102,10 @@ function addToCart(event) {
   console.log(storedItemParse);
 }
 
-function logout() {
-  alert("Logged out successfully!");
-  console.log(window.Function);
-}
+// function logout() {
+//   alert("Logged out successfully!");
+//   console.log(window.Function);
+// }
 
 // function login() {
 //   const userlogged = sessionStorage.getItem("logged");

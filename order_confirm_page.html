@@ -39,25 +39,66 @@
             Your order is now being processed, and will be sent to your address:
             <span id="address"></span>, we will notify you once it's on its way
             to you. If you have any questions or need to make any changes to
-            your order, please contact us at 202201183@iacademy.edu.ph or call us at
-            [Contact Phone Number]. Thank you for choosing iACADEMY! We
-            hope you enjoy your purchase.
+            your order, please contact us at 202201183@iacademy.edu.ph or call
+            us at <span>0998-532-8550</span>. Thank you for choosing iACADEMY!
+            We hope you enjoy your purchase.
           </p>
         </div>
       </div>
-      <div class="ordered_items">
-        <div class="cart__items">
-          <img src="http://127.0.0.1:5500/IMG/item1.png" alt="" class="product__image">
-          <p class="item__name">
-            Gigabyte GS27Q
-            Monitor
-          </p>
-          <div class="price--delete">
+      <div class="order_container">
+        <div class="ordered_items">
+          <div class="cart__items">
+            <img
+              src="http://127.0.0.1:5500/IMG/item1.png"
+              alt=""
+              class="product__image"
+            />
+            <p class="item__name">Gigabyte GS27Q Monitor</p>
+            <div class="price--delete">
               <p class="product__price" data-price="19950.00">₱ 19,950.00</p>
+            </div>
+            <label for="item__quantity">Quantity:</label>
+            <input
+              type="number"
+              min="1"
+              value="1"
+              class="item__quantity"
+              readonly
+            />
           </div>
-          <label for="item__quantity">Quantity:</label>
-          <input type="number" min="1" value="1" class="item__quantity" readonly>
-      </div>
+        </div>
+        <div class="grid order_receipt">
+          <div class="greenStyle"></div>
+          <div class="order_detail">
+            <div class="Summary">
+              <h2>Bill To:</h2>
+            </div>
+            <div>
+              <label for="user_fullname"><b>Name</b></label>
+              <p id="user_fullname"></p>
+              <label for="user_Address"><b>Address</b></label>
+              <p id="user_Address"></p>
+              <label for="user_PhoneNum"><b>Phone Number</b></label>
+              <p id="user_PhoneNum"></p>
+              <label for="user_Email"><b>Email</b></label>
+              <p id="user_Email"></p>
+            </div>
+            <div class="grid price__section">
+              <div>
+                <p>Subtotal (<span class="itemQty">0</span> item/s)</p>
+                <p>Shipping Fee</p>
+              </div>
+              <div class="subtotal_price cart-total">
+                <span id="cartTotal">₱ 0.00</span>
+                <span id="shippingFee">₱ 0.00</span>
+              </div>
+            </div>
+            <div class="grid price__section">
+              <p>Total Amount</p>
+              <p id="totalPrice" class="subtotal_price">₱ 0.00</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </body>

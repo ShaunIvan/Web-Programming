@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
   updateCart();
-  login();
+
+  const proceedButton = document.getElementById("checkoutbtn");
+  proceedButton.addEventListener("click", proceedCheckOut);
 });
 
 function updateCart() {
@@ -211,3 +213,98 @@ function deleteSelected() {
   }
 }
 
+function shippingDetails() {
+  const fname = document.getElementById("firstName").value.trim();
+  const lname = document.getElementById("lastName").value.trim();
+  const phoneNum = document.getElementById("mobile__number").value.trim();
+  const emailAd = document.getElementById("email__address").value.trim();
+  const houseAd = document.getElementById("house__address").value.trim();
+  const provinceAd = document.getElementById("province").value.trim();
+  const cityAd = document.getElementById("user__city").value.trim();
+  const barangAd = document.getElementById("user__barangay").value.trim();
+  if (
+    fname &&
+    lname &&
+    phoneNum &&
+    emailAd &&
+    houseAd &&
+    provinceAd &&
+    cityAd &&
+    barangAd
+  ) {
+    localStorage.setItem(
+      "shippingDetails",
+      JSON.stringify({
+        fname,
+        lname,
+        phoneNum,
+        emailAd,
+        houseAd,
+        provinceAd,
+        cityAd,
+        barangAd,
+      })
+    );
+    return true;
+  }
+}
+
+function proceedCheckOut() {
+  const shippingPop = document.querySelector(".shippingPop");
+  if (!shippingDetails()) {
+    shippingPop.innerHTML = `
+        <div class='confirmation errorShippingDetails'>
+            <p>Please Fill the Shipping Details</p>
+        </div>
+    `;
+    setTimeout(() => {
+      shippingPop.innerHTML = "";
+    }, 1500);
+    return false;
+  }
+
+  const noItemPop = document.querySelector(".noItemPop");
+  const cartItems = document.querySelectorAll(".cart__items");
+  const items = JSON.parse(localStorage.getItem("product_items")) || [];
+  let confirmedItems = [];
+
+  cartItems.forEach((item, index) => {
+    const isChecked = item.querySelector(".select-item").checked;
+    if (isChecked) {
+      const itemImage = item.querySelector(".product__image").src;
+      const itemName = item.querySelector(".item__name").textContent;
+      const quantity = parseInt(item.querySelector(".item__quantity").value);
+      const itemPrice = item.querySelector(".product__price").textContent;
+      const dPrice = parseFloat(
+        item.querySelector(".product__price").getAttribute("data-price")
+      );
+
+      confirmedItems.push({
+        itemName: itemName,
+        itemImg: itemImage,
+        itemQuantity: quantity,
+        itemPrice: itemPrice,
+        itemDataP: dPrice,
+      });
+
+      items.splice(index - confirmedItems.length + 1, 1);
+    }
+  });
+
+  localStorage.setItem("product_items", JSON.stringify(items));
+  if (confirmedItems.length > 0) {
+    localStorage.setItem("confirmedItems", JSON.stringify(confirmedItems));
+    window.location.href = "order_confirm_page";
+  } else {
+    noItemPop.innerHTML = `
+        <div class='confirmation errorSelectItem'>
+            <p>Please Select An Item to purchase</p>
+        </div>
+    `;
+    setTimeout(() => {
+      noItemPop.innerHTML = "";
+    }, 1500);
+    return;
+  }
+  updateCart();
+}

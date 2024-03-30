@@ -287,6 +287,26 @@ nav {
     left: 40%;
 }
 
+.shippingPop{
+    position: absolute;
+    background: #FFF;
+    border-radius: 5px;
+    z-index: 2000;
+    box-shadow: 0px 0px 15px rgb(255, 27, 27);
+    top: 15%;
+    left: 40%;
+}
+
+.noItemPop{
+    position: absolute;
+    background: #FFF;
+    border-radius: 5px;
+    z-index: 2000;
+    box-shadow: 0px 0px 15px rgb(255, 27, 27);
+    top: 55%;
+    left: 25%;
+}
+
 .confirmation h1{
     font-size: 1.5rem;
 }
@@ -304,6 +324,18 @@ nav {
 }
 
 .errorDelete{
+    text-align: center;
+    width: 300px;
+    height: 50px;
+}
+
+.errorShippingDetails{
+    text-align: center;
+    width: 300px;
+    height: 50px;
+}
+
+.errorSelectItem{
     text-align: center;
     width: 300px;
     height: 50px;
