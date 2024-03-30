@@ -37,17 +37,17 @@
           <p><span id="contact"></span></p>
           <p>
             Your order is now being processed, and will be sent to your address:
-            <span id="address"></span>, we will notify you once it's on its way
-            to you. If you have any questions or need to make any changes to
-            your order, please contact us at 202201183@iacademy.edu.ph or call
-            us at <span>0998-532-8550</span>. Thank you for choosing iACADEMY!
-            We hope you enjoy your purchase.
+            <b><span id="address"></span></b>, we will notify you once it's on
+            its way to you. If you have any questions or need to make any
+            changes to your order, please contact us at
+            202201183@iacademy.edu.ph or call us at 0998-532-8550. Thank you for
+            choosing iACADEMY! We hope you enjoy your purchase.
           </p>
         </div>
       </div>
       <div class="order_container">
         <div class="ordered_items">
-          <div class="cart__items">
+          <!-- <div class="cart__items">
             <img
               src="http://127.0.0.1:5500/IMG/item1.png"
               alt=""
@@ -58,14 +58,8 @@
               <p class="product__price" data-price="19950.00">₱ 19,950.00</p>
             </div>
             <label for="item__quantity">Quantity:</label>
-            <input
-              type="number"
-              min="1"
-              value="1"
-              class="item__quantity"
-              readonly
-            />
-          </div>
+            <input class="item__quantity" readonly>
+          </div> -->
         </div>
         <div class="grid order_receipt">
           <div class="greenStyle"></div>
@@ -85,7 +79,7 @@
             </div>
             <div class="grid price__section">
               <div>
-                <p>Subtotal (<span class="itemQty">0</span> item/s)</p>
+                <p>Subtotal (<span class="itemQty"></span> item/s)</p>
                 <p>Shipping Fee</p>
               </div>
               <div class="subtotal_price cart-total">
@@ -101,5 +95,6 @@
         </div>
       </div>
     </div>
+    <script src="./Javascript/confirmorder.js"></script>
   </body>
 </html>
