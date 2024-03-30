@@ -55,7 +55,58 @@ nav {
     border-radius: 5px 0 0 5px;
 }
 
-/* LEFT CONTAINER CART */
+/* TOP CONTAINER CART */
+
+.top__container{
+    display: flex;
+    padding-top: 10px;
+    justify-content: space-evenly;
+}
+
+.shipping__container{
+    display: block;
+    background-color: #ffffff;
+    margin-left: 25px;
+    margin-bottom: 10px;
+    padding: 10px 20px 10px 10px;
+    width:100%;
+    border-radius: 10px 10px 0 0;
+}
+
+.shipping__details{
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.shipping__details input{
+    font-size: 1.8rem;
+    width: 500px;
+    padding: 5px;
+}
+
+.shipping__details label{
+    font-size: 1.7rem;
+}
+
+.detailsInput{
+    margin-left: 50px;
+}
+
+.shipping__details input, label{
+    display: block;
+    margin-left: 10px;
+}
+
+.nameInput{
+    display: flex;
+    justify-content: space-between;
+}
+.nameInput input{
+    width: 245px;
+}
+
+
+
 
 /* CONTAINER */
 
@@ -90,14 +141,16 @@ nav {
 .command__container{
     display: flex;
     height: 36px;
-    width: 800px;
+    width: 850px;
     background-color: #fff;
-    border-radius: 8px 8px 0 0;
-    margin-left: 30px;
+    margin-left: 25px;
+    margin-right: 15px;
     align-items: center;
+    
 }
 
 .select-container{
+    display: flex;
     margin-left: 4px;
     flex: 1;
 }
@@ -120,9 +173,9 @@ nav {
 .cart__items{
     display: flex;
     height: 126px;
-    width: 800px;
+    width: 850px;
     background-color: #FFF;
-    margin: 10px 10px 0;
+    margin: 10px 5px 0;
 }
 
 .cart__items label{
@@ -180,12 +233,14 @@ nav {
 /* ORDER SUMMARY */
 
 .order{
+    position: sticky;
+    justify-self: end;
     width: 350px;
-    max-height: 300px;
+    height: 307px;
     background-color: #FFF;
-    border-radius: 8px 8px 0 0;
     padding: 10px;
-    margin-top: 10px;
+    margin-top: -35px;
+    margin-right: -20px;
 }
 .Summary{
     border-bottom: 1px solid #ccc;
@@ -212,6 +267,7 @@ nav {
     width: 100%;
     height: 40px;
     cursor:pointer;
+    margin-top: 16px;
     transition: background-color 0.2s;
 }
 
@@ -222,13 +278,13 @@ nav {
 /* CANCEL ORDER PROMPT*/
 
 .confirmPop{
-    position: absolute;
+    position: fixed;
     background: #FFF;
     border-radius: 5px;
     z-index: 2000;
-    left: 30%;
-    top: 30%;
     box-shadow: 8px 4px 15px rgb(83, 83, 83);
+    top: 40%;
+    left: 40%;
 }
 
 .confirmation h1{

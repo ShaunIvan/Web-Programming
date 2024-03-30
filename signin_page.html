@@ -28,26 +28,20 @@
 
     <div class="sign_container">
         <div>
-            <form>
             <label for="username_input">Username</label>
             <input type="text" id="username_input">
             <label for="password_input">Password</label>
-            <input type="password" class="password_input">
+            <input type="password" id="password_input">
             <label for="password_input">Repeat Password</label>
-            <input type="password" class="password_input">
-            </form>
+            <input type="password" id="repeat_password">
         </div>
 
-        <div>
-            <form>
-                
+        <div>              
                 <label for="fullname">Full name</label>
-                <input type="text" class="fullname">
-                <button type="submit">Register</button>
-
-             </form>
+                <input type="text">
+                <button onclick="register()" type="submit">Register</button>
         </div>
     </div>
-    
+    <script src="./Javascript/signin.js"></script>
 </body>
 </html>

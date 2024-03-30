@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order Confirmed</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./CSS/order_confirmed.css" />
+  </head>
+  <body>
+    <nav>
+      <a class="logo" href="index.html">
+        <div class="logo">
+          <h1>Logo</h1>
+        </div>
+      </a>
+
+      <!-- Navigation Search Box -->
+      <div id="logout">
+        <a href="">Log out</a>
+      </div>
+    </nav>
+
+    <div class="container1">
+      <div class="order-message_container">
+        <header class="order_title">
+          <img src="./IMG/thumbsup.png" alt="" />
+          <h1>YOUR ORDER HAS BEEN CONFIRMED!</h1>
+        </header>
+        <div class="confirm_message">
+          <p class="user_greet">Hi <span id="fullname"></span>,</p>
+          <p><span id="contact"></span></p>
+          <p>
+            Your order is now being processed, and will be sent to your address:
+            <span id="address"></span>, we will notify you once it's on its way
+            to you. If you have any questions or need to make any changes to
+            your order, please contact us at 202201183@iacademy.edu.ph or call us at
+            [Contact Phone Number]. Thank you for choosing iACADEMY! We
+            hope you enjoy your purchase.
+          </p>
+        </div>
+      </div>
+      <div class="ordered_items">
+        <div class="cart__items">
+          <img src="http://127.0.0.1:5500/IMG/item1.png" alt="" class="product__image">
+          <p class="item__name">
+            Gigabyte GS27Q
+            Monitor
+          </p>
+          <div class="price--delete">
+              <p class="product__price" data-price="19950.00">₱ 19,950.00</p>
+          </div>
+          <label for="item__quantity">Quantity:</label>
+          <input type="number" min="1" value="1" class="item__quantity" readonly>
+      </div>
+      </div>
+    </div>
+  </body>
+</html>

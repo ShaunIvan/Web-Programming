@@ -25,6 +25,7 @@ function myFunction() {
       const itemName = item
         .querySelector(".item_name")
         .textContent.toLowerCase();
+
       const itemCategory = item.querySelector(".category")
         ? item.querySelector(".category").textContent.toLowerCase()
         : "";
@@ -78,7 +79,6 @@ function addToCart(event) {
   var itemImage = parentContainer.querySelector(".item_image").src;
   var itemName = parentContainer.querySelector(".item_name").textContent;
   var itemPrice = parentContainer.querySelector(".item_price").textContent;
- 
   var dataPrice = parentContainer
     .querySelector(".item_price")
     .getAttribute("data-price");
@@ -88,7 +88,6 @@ function addToCart(event) {
     name: itemName,
     price: itemPrice,
     dataP: dataPrice,
-
   };
 
   let product_items = JSON.parse(localStorage.getItem("product_items")) || [];
@@ -108,3 +107,19 @@ function logout() {
   console.log(window.Function);
 }
 
+function login() {
+  const userlogged = sessionStorage.getItem("logged");
+  const isUser = sessionStorage.getItem("user");
+
+  if (userlogged && isUser) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+if (login()) {
+  alert("You are Logged in");
+} else {
+  window.location.href = "./login_page.html";
+}
