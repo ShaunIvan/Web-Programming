@@ -86,7 +86,6 @@ nav {
 /* Contents */
 
 .container1 {
-    height: 100vh;
     display: flex;
     background-color: #E4E4E4;
     margin: 0 auto;
@@ -136,6 +135,7 @@ input {
 
 .item_description {
     margin-top: 20px;
+    margin-right: 100px;
     font-size: 30px;
 } 
 .item_description img {
@@ -143,4 +143,10 @@ input {
 }
 .item_description button {
     margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.item_details {
+    font-size: 15px;
+
 }
