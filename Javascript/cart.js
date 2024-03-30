@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   updateCart();
+  login();
 });
 
 function updateCart() {
@@ -194,21 +195,19 @@ function deleteSelected() {
       modalOverlay.style.display = "none";
     });
 
-    document
-      .querySelector(".removeBtn")
-      .addEventListener("click", function () {
-        const items = JSON.parse(localStorage.getItem("product_items")) || [];
-        // Filter out the items that are not checked, to keep them
-        const newItems = items.filter(
-          (_, index) =>
-            !document.querySelectorAll(".cart__items .select-item")[index]
-              .checked
-        );
+    document.querySelector(".removeBtn").addEventListener("click", function () {
+      const items = JSON.parse(localStorage.getItem("product_items")) || [];
+      // Filter out the items that are not checked, to keep them
+      const newItems = items.filter(
+        (_, index) =>
+          !document.querySelectorAll(".cart__items .select-item")[index].checked
+      );
 
-        localStorage.setItem("product_items", JSON.stringify(newItems));
-        confirmPop.innerHTML = ""; // Clear confirmation dialog
-        modalOverlay.style.display = "none"; // Hide overlay
-        updateCart(); // Re-render the cart items
-      });
+      localStorage.setItem("product_items", JSON.stringify(newItems));
+      confirmPop.innerHTML = ""; // Clear confirmation dialog
+      modalOverlay.style.display = "none"; // Hide overlay
+      updateCart(); // Re-render the cart items
+    });
   }
 }
+
