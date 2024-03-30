@@ -25,6 +25,7 @@ function myFunction() {
       const itemName = item
         .querySelector(".item_name")
         .textContent.toLowerCase();
+
       const itemCategory = item.querySelector(".category")
         ? item.querySelector(".category").textContent.toLowerCase()
         : "";
@@ -107,3 +108,19 @@ function logout() {
   console.log(window.Function);
 }
 
+function login() {
+  const userlogged = sessionStorage.getItem("logged");
+  const isUser = sessionStorage.getItem("user");
+
+  if (userlogged && isUser) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+if (login()) {
+  alert("You are Logged in");
+} else {
+  window.location.href = "./login_page.html";
+}
