@@ -282,7 +282,7 @@ function proceedCheckOut() {
       confirmedItems.push({
         itemName: itemName,
         itemImg: itemImage,
-        itemQuantity: quantity,
+        itemQty: quantity,
         itemPrice: itemPrice,
         itemDataP: dPrice,
       });
