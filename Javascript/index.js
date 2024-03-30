@@ -1,3 +1,29 @@
+document.addEventListener("DOMContentLoaded", () => {
+  let logged = sessionStorage.getItem("logged");
+
+  if (logged == "true")
+  {
+    sessionStorage.setItem("logged", true)
+  }
+  else if (logged == "false"){
+    
+    alert("User not logged in, redirecting to login...")
+    window.location.href = "./login_page.html"
+  }
+  else 
+  {
+    alert("User not logged in for the first time, redirecting to login...")
+    window.location.href = "./login_page.html"
+  }
+});
+
+function logoutinstant(){
+  let logged = sessionStorage.getItem("logged");
+  sessionStorage.setItem ("logged", false)
+  window.location.reload();
+
+}
+
 function myFunction() {
   var addCartBtn = document.getElementsByClassName("addToCart");
   var productLink = document.getElementsByClassName("productlink");
