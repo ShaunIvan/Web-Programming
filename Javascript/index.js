@@ -107,19 +107,19 @@ function logout() {
   console.log(window.Function);
 }
 
-function login() {
-  const userlogged = sessionStorage.getItem("logged");
-  const isUser = sessionStorage.getItem("user");
+// function login() {
+//   const userlogged = sessionStorage.getItem("logged");
+//   const isUser = sessionStorage.getItem("user");
 
-  if (userlogged && isUser) {
-    return true;
-  } else {
-    return false;
-  }
-}
+//   if (userlogged && isUser) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
 
-if (login()) {
-  alert("You are Logged in");
-} else {
-  window.location.href = "./login_page.html";
-}
+// if (login()) {
+//   alert("You are Logged in");
+// } else {
+//   window.location.href = "./login_page.html";
+// }
