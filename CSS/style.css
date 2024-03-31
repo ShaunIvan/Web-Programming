@@ -13,7 +13,7 @@ body {
 
 /* Logo */
 
-.logo {
+.logo img {
     color: white;
     text-decoration: none; 
 }
@@ -117,14 +117,15 @@ nav {
 
 /* Slider */
 
-.slide__container{
+.slide__container {
     display: flex;
     margin: 20px 20px;
+    
 }
 
 .slider {
-    width: 800px;
-    height: 500px;
+    width: 700px;
+    height: 400px;
     overflow: hidden;
     border-radius: 6px;
 }
@@ -145,14 +146,14 @@ nav {
 }
 
 .slide img {
-    width: 800px;
-    height: 500px;
+    width: 700px;
+    height: 400px;
 }
 
 .navigation-manual {
     position: absolute;
-    width: 800px;
-    margin-top: -40px;
+    width: 650px;
+    margin-top: -140px;
     display: flex;
     justify-content: center;
 }
@@ -186,14 +187,15 @@ nav {
 .product_title{
     text-align: center;
     margin: 30px 0 10px 0;
+    color: var(--primary--color);
 }
 
 .navigation-auto{
     position: absolute;
     display: flex;
-    width: 800px;
+    width: 650px;
     justify-content: center;
-    margin-top: 460px;
+    margin-top: 360px;
 }
 
 .navigation-auto div{

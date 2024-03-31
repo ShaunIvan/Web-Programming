@@ -11,9 +11,11 @@ body {
     font-family: "Jost";
 }
 
-.logo {
+.logo img {
     color: white;
     text-decoration: none;
+    height: 70px;
+    margin-left: 40px;
 }
 
 /* Navigation */
