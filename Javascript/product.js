@@ -1,12 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
-
   // ADD TO CART FUNCTION
   const addCart = document.querySelector(".addToCart");
   addCart.addEventListener("click", addToCart);
 
   productLoad();
 });
-
 
 // LOADS THE PRODUCT
 function productLoad() {
@@ -20,13 +18,12 @@ function productLoad() {
     document.querySelector(".item_price").dataset.price = productDetails.dataP;
     document.querySelector(".item_details").textContent =
       productDetails.details;
-
     productDetails.details || "No additional details available.";
+    document.querySelector(".list_details").innerHTML = productDetails.itemList;
   } else {
     console.log("No product details found in localStorage.");
   }
 }
-
 
 // ADD TO CART FUNCTION
 function addToCart(event) {
