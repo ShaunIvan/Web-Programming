@@ -162,6 +162,11 @@ input {
     margin-right: 20px;
     display: table-row;
     text-align: justify;
+    display: none;
+}
+.list_detials ul {
+    border: solid;
+    font-size: 15px;
 }
 
 
