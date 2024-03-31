@@ -13,7 +13,6 @@ function myFunction() {
     addCartBtn[i].addEventListener("click", addToCart);
   }
 
-
   // SEARCH FUNCTION
   const searchButton = document.querySelector(".searchbox button");
   const searchInput = document.querySelector(".searchbox input");
@@ -44,10 +43,7 @@ function myFunction() {
 
     if (searchMatchCount <= 2) {
       productContainer.style.gridTemplateColumns = "repeat(2, auto)";
-    } else {
-      productContainer.style.gridTemplateColumns = "";
-    }
-    if (searchMatchCount <= 3) {
+    } else if (searchMatchCount <= 3) {
       productContainer.style.gridTemplateColumns = "repeat(3, auto)";
     } else {
       productContainer.style.gridTemplateColumns = "";
@@ -71,11 +67,7 @@ function myFunction() {
         if (searchMatchCount <= 2) {
           item.style.margin = "0 auto";
           item.style.width = "400px";
-        } else {
-          item.style.margin = "";
-          item.style.width = "";
-        }
-        if (searchMatchCount <= 3) {
+        } else if (searchMatchCount <= 3) {
           item.style.margin = "0 auto";
           item.style.width = "300px";
         } else {
@@ -108,7 +100,7 @@ function myFunction() {
 
 // IMAGE SLIDER AUTOMATIC
 function imageSlider() {
-  var counter = 1;
+  var counter = 2;
   setInterval(function () {
     document.getElementById("radio" + counter).checked = true;
     counter++;

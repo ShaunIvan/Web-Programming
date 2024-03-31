@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Register</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -10,38 +10,40 @@
       href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/login_style.css">
-</head>
+    <link rel="stylesheet" href="css/login_style.css" />
+  </head>
 
-<body>
+  <body>
     <!-- Logo  -->
     <nav>
-        <div class="logocenter">
-            <h1>Logo</h1>
-        </div>
+      <div class="logocenter">
+        <img src="./IMG/logo.png" alt="" />
+      </div>
     </nav>
-    
+
+    <div class="bg-photo"></div>
+
     <!-- Contents -->
-    <div>
-        <h2>SIGN-IN</h2>
-    </div>
-
-    <div class="sign_container">
+    <div class="bgRegister_container">
+      <h2>SIGN-IN</h2>
+      <div class="sign_container">
         <div>
-            <label for="username_input">Username</label>
-            <input type="text" id="username_input">
-            <label for="password_input">Password</label>
-            <input type="password" id="password_input">
-            <label for="password_input">Repeat Password</label>
-            <input type="password" id="repeat_password">
+          <label for="username_input">Username</label>
+          <input type="text" id="username_input" />
+          <label for="password_input">Password</label>
+          <input type="password" id="password_input" />
+          <label for="password_input">Repeat Password</label>
+          <input type="password" id="repeat_password" />
         </div>
 
-        <div>              
-                <label for="fullname">Full name</label>
-                <input type="text">
-                <button onclick="register()" type="submit">Register</button>
+        <div>
+          <label for="fullname">Full name</label>
+          <input type="text" />
+          <button onclick="register()" type="submit">Register</button>
         </div>
+      </div>
     </div>
+
     <script src="./Javascript/signin.js"></script>
-</body>
+  </body>
 </html>

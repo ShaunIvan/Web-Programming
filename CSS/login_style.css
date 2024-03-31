@@ -1,13 +1,27 @@
+
+:root{
+    --primary--color:#213159;
+    --secondary--color: #3d6098;
+    --button--color: #f04b4c;
+    --background--color: #e7e7e7;
+}
+
+
 body {
     margin: 0;
     padding: 0;
     font-family: "Jost";
 }
 
+h2 {
+    font-size: 2.5rem;
+    letter-spacing: 5px;
+}
+
 /* Logo */
 
-.logo {
-    
+.logocenter img {
+    width: 100px;
 }
 
 /* Form setup */
@@ -34,14 +48,14 @@ input[type=text], input[type=password]{
 }
 
 button {
-    background-color: #04AA6D;
+    background-color: var(--button--color);
     color: white;
     padding: 14px 20px;
     margin: 8px 0 0;
     border: none;
     cursor: pointer;
     width: 300px;
-  }
+}
 
 /* Navigation */
 .logocenter{
@@ -51,58 +65,90 @@ button {
 
 nav {
     display: flex;
-    background-color: #57C261;
+    background-color: var(--primary--color);
     position: relative;
     text-align: center;
     padding: 15px 30px;
 }
 
-/* Item Container */
-.containerLogin{
-    padding: 0px;
-    border: solid 1px rgb(255, 255, 255);
-    background-color: #ffffff;
-    margin-top: 10%;
-    margin-left: 40%;
-    margin-right: 40%;
-    margin-bottom: -4%;
-} 
-h2 {
-    font-size: 40px;
-    text-align: center;
-    letter-spacing: 5px;
-
+.grid{
+    display: grid;
 }
 
-.container1 {
-    padding: 20px;
-    border: solid 1px rgb(255, 255, 255);
-    background-color: #ffffff;
-    margin-top: 2%;
-    margin-left: 40%;
-    margin-right: 40%;
-} 
+.bg-photo{
+    position: absolute;
+    z-index: -1;
+    background-image: url(/IMG/bgcomputer.jpg);
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
 
-.smallcontainer{    
-    border: solid 1px rgb(255, 255, 255);
-    background-color: white;
+/* Item Container */
+
+/* LOGIN PAGE */
+.container1{
+    position: static;
+    width: 450px;
+    padding: 0px;
+    background: rgb(61, 96, 152, 0.8);
+    filter: blur(100%);
+    margin: 120px auto;
+    justify-content: center;
+    border-radius: 8px;
+    color: #ffffff;
+    text-align: center;
+}
+
+
+
+.register_container{    
     display: flex;
     justify-content: flex-end;
     gap: 5px;
     padding-right: 5px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    color: rgb(231, 231, 231);
 }
 
+.register_container label{
+    font-weight: 300;
+}
+
+.register_container a{
+    color: #ffffff;
+    font-weight: 500;
+}
+
+/* SIGNUP */
+
+
+.bgRegister_container{
+    position: static;
+    width: 600px;
+    background: rgb(61, 96, 152, 0.8);
+    filter: blur(100%);
+    margin: 120px auto;
+    justify-content: center;
+    border-radius: 8px;
+    color: #ffffff;
+    text-align: center;
+    padding: 30px;
+}
+
+.bgRegister_container h2{
+    margin-top: 0;
+}
 
 .sign_container{
-    padding: 20px;
-    border: solid 1px rgb(0, 0, 0);
-    background-color: #ffffff;
-    margin: 0 auto;
-    width: 610px;
-
     display: flex;
-    justify-content: space-evenly;
+    gap: 20px;
+    justify-content: center;
+}
 
+.sign_container div{
 }
 
 
