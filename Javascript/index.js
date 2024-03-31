@@ -159,6 +159,7 @@ function nextPage(event) {
     dataP: parentContainer
       .querySelector(".item_price")
       .getAttribute("data-price"),
+    itemList: parentContainer.querySelector(".list_ItemDetails").innerHTML,
   };
 
   localStorage.setItem("productItem", JSON.stringify(itemDetails));
