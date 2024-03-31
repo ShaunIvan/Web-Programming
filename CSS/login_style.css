@@ -148,7 +148,37 @@ nav {
     justify-content: center;
 }
 
+.colorful {
+    background-color: green;
+    animation-name: button;
+    animation-duration: 5s;
+  }
+  
+  @keyframes button {
+    0%   {background-color:green;}
+    25%  {background-color:red;}
+    50%  {background-color:yellow;}
+    75%  {background-color:blue;}
+    100% {background-color:green;}
+  }
 
+
+.userError{
+    background-color: green;
+    position: relative;
+    animation-name: error;
+    animation-duration: 5s;
+    border: 4px black;
+    transition: 5s;
+
+    
+}
+
+@keyframes error {
+    0%   {top:-600px;}
+    100%  {top:0px;}
+}
+  
 
 
 

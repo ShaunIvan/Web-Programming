@@ -8,7 +8,11 @@
    const username = document.getElementById("username_input").value;
    const password = document.getElementById("password_input").value;
    const getUsername = sessionStorage.getItem("user_username");
-   const getPassword = sessionStorage.getItem("user_password")
+   const getPassword = sessionStorage.getItem("user_password");
+   const errorMessage = document.querySelector(".userError");
+  errorMessage.innerHTML="";
+
+
    if (username === "CSELEC03" && password === "webprog") {
      sessionStorage.setItem("logged", true);
      sessionStorage.setItem("user", username);
@@ -17,6 +21,14 @@
      sessionStorage.setItem("logged", true);
      window.location.href = "./index.html";
    } else {
-     alert("Invalid Username or password. Please try again");
+     errorMessage.innerHTML =`
+      <div> 
+        <h1>Username Error</h1>
+      </div>
+    `;
+    setTimeout(() => {
+      errorMessage.innerHTML =``;
+      errorMessage.style.display ="none";
+    }, 1500);
    }
  }
