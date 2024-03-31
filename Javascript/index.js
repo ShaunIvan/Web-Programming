@@ -4,16 +4,17 @@ function myFunction() {
   var addCartBtn = document.getElementsByClassName("addToCart");
   var productLink = document.getElementsByClassName("productlink");
 
+  //ANCHOR LINK ARRAY
   for (var i = 0; i < productLink.length; i++) {
     productLink[i].addEventListener("click", nextPage);
   }
-
+  // BUTTON ARRAY
   for (var i = 0; i < addCartBtn.length; i++) {
     addCartBtn[i].addEventListener("click", addToCart);
   }
 
-  //anchor link array
 
+  // SEARCH FUNCTION
   const searchButton = document.querySelector(".searchbox button");
   const searchInput = document.querySelector(".searchbox input");
   const items = document.querySelectorAll(".grid.product__container > div");
@@ -24,10 +25,11 @@ function myFunction() {
     let searchMatchFound = false;
     let searchMatchCount = 0;
 
+    // CHANGES GRID COLUMNS ON SEARCH
     items.forEach((item) => {
       const itemName = item
         .querySelector(".item_name")
-        .textContent.toLowerCase(); // Adjust selector as needed
+        .textContent.toLowerCase();
       const itemCategory = item.querySelector(".category")
         ? item.querySelector(".category").textContent.toLowerCase()
         : "";
@@ -51,8 +53,9 @@ function myFunction() {
       productContainer.style.gridTemplateColumns = "";
     }
 
+    // SEARCH AND DISPLAY SEARCHED ITEMS
     items.forEach((item) => {
-      // Search both in item names and categories
+      // SEARCH ITEM NAMES AND CATEGORIES
       const itemName = item
         .querySelector(".item_name")
         .textContent.toLowerCase();
@@ -103,6 +106,7 @@ function myFunction() {
   });
 }
 
+// IMAGE SLIDER AUTOMATIC
 function imageSlider() {
   var counter = 1;
   setInterval(function () {
@@ -115,6 +119,7 @@ function imageSlider() {
   }, 5000);
 }
 
+// CHECKS IF USER IS LOGGED IN
 function isLogged() {
   let logged = sessionStorage.getItem("logged");
 
@@ -129,12 +134,14 @@ function isLogged() {
   }
 }
 
+// USER LOGOUT
 function logoutinstant() {
   let logged = sessionStorage.getItem("logged");
   sessionStorage.setItem("logged", false);
   window.location.reload();
 }
 
+// NEXT PAGE REDIRECT
 function nextPage(event) {
   event.preventDefault(); // Prevent the default anchor action
   var parentContainer = event.target.closest(".product__card");
@@ -157,6 +164,7 @@ function nextPage(event) {
   window.location.href = "product_page.html";
 }
 
+// ADD TO CART FUNCTION
 function addToCart(event) {
   var button = event.target;
   var parentContainer = button.closest(".product__card");
@@ -186,25 +194,3 @@ function addToCart(event) {
 
   console.log(storedItemParse);
 }
-
-// function logout() {
-//   alert("Logged out successfully!");
-//   console.log(window.Function);
-// }
-
-// function login() {
-//   const userlogged = sessionStorage.getItem("logged");
-//   const isUser = sessionStorage.getItem("user");
-
-//   if (userlogged && isUser) {
-//     return true;
-//   } else {
-//     return false;
-//   }
-// }
-
-// if (login()) {
-//   alert("You are Logged in");
-// } else {
-//   window.location.href = "./login_page.html";
-// }

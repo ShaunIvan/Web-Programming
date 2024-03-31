@@ -5,12 +5,14 @@ document.addEventListener("DOMContentLoaded", () => {
   proceedButton.addEventListener("click", proceedCheckOut);
 });
 
+// UPDATE CART FUNCTION
 function updateCart() {
   const cartContainer = document.querySelector(".cart__container");
   const items = JSON.parse(sessionStorage.getItem("product_items")) || [];
 
   cartContainer.innerHTML = "";
 
+  // DISPLAYS EACH PRODUCT FROM THE SESSIONSTORAGE
   items.forEach((item, index) => {
     const itemElement = document.createElement("div");
     itemElement.classList.add("cart__items");
@@ -40,6 +42,7 @@ function updateCart() {
   updateCartTotal();
 }
 
+// UPDATES THE TOTAL PRICE OF THE ITEMS
 function updateCartTotal() {
   const cartItems = document.querySelectorAll(".cart__items");
   let subtotal = 0;
@@ -62,6 +65,7 @@ function updateCartTotal() {
     }
   });
 
+  // FORMATS THE PRICE
   const subTotalFormat = new Intl.NumberFormat("en-us", {
     style: "currency",
     currency: "PHP",
@@ -88,6 +92,7 @@ function updateCartTotal() {
     .forEach((el) => (el.textContent = itemCheckOutQty));
 }
 
+// CHECKS THE CHECKBOXES AND QUANTITY
 function checkboxAndQuantity() {
   const itemCheckBox = document.querySelectorAll(".select-item");
   const quantity = document.querySelectorAll(".item__quantity");
@@ -118,6 +123,7 @@ function checkboxAndQuantity() {
   updateCartTotal();
 }
 
+// SHOWS A DELETE PROMPT UPON CLICKING DELETE
 function showDeletePrompt(index) {
   const modalOverlay = document.getElementById("modalOverlay");
   modalOverlay.style.display = "block";
@@ -144,6 +150,7 @@ function showDeletePrompt(index) {
   });
 }
 
+// REMOVES ITEM FROM THE CART AND SESSIONSTORAGE
 function removeItem(index) {
   let items = JSON.parse(sessionStorage.getItem("product_items")) || [];
   items.splice(index, 1);
@@ -155,11 +162,13 @@ function removeItem(index) {
   updateCart();
 }
 
+// NEEDS TO CHECK IF THE ITEM IS SELECTED TO DELETE
 function commandDelete() {
   const deleteAllBtn = document.querySelector(".command_deleteBtn");
   deleteAllBtn.addEventListener("click", deleteSelected);
 }
 
+// SHOWS PROMPTS OF THE SELECTED ITEMS FOR DELETION AND REMOVES ITEMS FROM SESSIONSTORAGE
 function deleteSelected() {
   const checkedItem = document.querySelectorAll(
     ".cart__items .select-item:checked"
@@ -213,6 +222,7 @@ function deleteSelected() {
   }
 }
 
+// CHECKS IF SHIPPING DETAILS HAVE BEEN FILLED
 function shippingDetails() {
   const fname = document.getElementById("firstName").value.trim();
   const lname = document.getElementById("lastName").value.trim();
@@ -249,6 +259,8 @@ function shippingDetails() {
   }
 }
 
+// STORES ALL SELECTED ITEMS WHEN CHECKOUT BUTTON IS 
+// CLICKED TO THE SESSION STORAGE AND REDIRECTS TO THE ORDER CONFIRMATION PAGE
 function proceedCheckOut() {
   const shippingPop = document.querySelector(".shippingPop");
   if (!shippingDetails()) {

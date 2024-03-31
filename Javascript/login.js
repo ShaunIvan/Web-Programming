@@ -2,6 +2,8 @@
    const loginbutton = document.getElementById("loginbutton");
    loginbutton.addEventListener("click", login);
  })
+
+//  CHECKS USER CREDENTIALS
  function login() {
    const username = document.getElementById("username_input").value;
    const password = document.getElementById("password_input").value;

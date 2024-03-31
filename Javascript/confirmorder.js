@@ -3,6 +3,8 @@ document.addEventListener("DOMContentLoaded", () => {
   orderInvoice();
 });
 
+//DISPLAYS THE SHIPPING USER DETAILS
+
 function orderShippingConfirmed() {
   const users = JSON.parse(sessionStorage.getItem("shippingDetails"));
   if (users) {
@@ -30,6 +32,7 @@ function orderShippingConfirmed() {
   const item = JSON.parse(sessionStorage.getItem("confirmedItems"));
 }
 
+// SHOWS ALL PURCHASED ITEMS
 function orderInvoice() {
   const orderContainer = document.querySelector(".ordered_items");
   const cartItems = JSON.parse(sessionStorage.getItem("confirmedItems"));
@@ -53,6 +56,7 @@ function orderInvoice() {
   updateCartTotal();
 }
 
+// FINALIZES THE RECEIPT OF THE ORDER
 function updateCartTotal() {
   const cartItems = document.querySelectorAll(".cart__items");
   let subtotal = 0;
