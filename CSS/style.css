@@ -251,12 +251,19 @@ nav {
     width: 550px;
     background-color: #fff;
     align-items: center;
-    margin-top: 50px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #cdcdcd;
+}
+
+#selectAll{
+    width: 40px;
+    height: 20px;
 }
 
 .select-container{
     display: flex;
-    margin-left: 4px;
+    margin-left: -5px;
     flex: 1;
 }
 
@@ -303,6 +310,10 @@ nav {
     margin: 0 8px;
 }
 
+.select-item{
+    width: 20px;
+}
+
 .product__image{
     width: 20%;
     height: 80px;
@@ -343,7 +354,7 @@ nav {
 }
 
 .item__quantity{
-    width: 25px;
+    width: 40px;
     height: 25px;
     font-size: 1.2rem;
     text-align: center;

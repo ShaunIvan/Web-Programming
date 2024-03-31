@@ -1,3 +1,10 @@
+:root {
+    --primary--color: #213159;
+    --secondary--color: #3d6098;
+    --button--color: #f04b4c;
+    --background--color: #e7e7e7;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -6,17 +13,22 @@ body {
 
 .logo {
     color: white;
-    text-decoration: none;
+    text-decoration: none; 
+    margin: 0 auto;
 }
-
-/* Navigation */
+.logo img{
+    width: 100px;
+}
 
 nav {
     display: flex;
-    background-color: #57C261;
-    position: relative;
+    background-color: var(--primary--color);
+    position:sticky;
+    top: 0;
     text-align: center;
     padding: 15px 30px;
+    overflow: hidden;
+    z-index: 1;
 }
 
 .grid{
@@ -77,6 +89,7 @@ nav {
     margin: 50px 15px 0;
     background-color: #fff;
     padding-top: 40px;
+    border-radius: 20px 20px 0 0;
 }
 
 .order_title{
@@ -85,10 +98,15 @@ nav {
     align-items: center;
     font-size: 1.5rem;
     color: #57C261;
+    margin-top: 20px;
 }
 
 .order_title img{
     width: 160px;
+}
+
+.order_title h1{
+    margin-left: 10px;
 }
 
 .user_greet{
@@ -177,7 +195,7 @@ nav {
     position: absolute;
     height: 35px;
     width: 500px;
-    background-color: #57C261;
+    background-color: var(--secondary--color);
 }
 
 .price__section{

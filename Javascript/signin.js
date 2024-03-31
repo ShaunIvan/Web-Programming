@@ -3,6 +3,8 @@ function register() {
   const username = document.getElementById("username_input").value;
   const password = document.getElementById("password_input").value;
   const passwordrepeat = document.getElementById("repeat_password").value;
+  const errorMessage = document.querySelector(".userError");
+  errorMessage.innerHTML="";
 
   if (username !== "CSELEC03") {
     if (username !== "") {
@@ -13,18 +15,58 @@ function register() {
             sessionStorage.setItem("user_password", password);
             window.location.href = "./login_page.html";
           } else {
-            alert("Password doesn't match up with repeat password");
+            errorMessage.innerHTML =`
+      <div> 
+        <h1>Password does not match with repeat password</h1>
+      </div>
+    `;
+    setTimeout(() => {
+      errorMessage.innerHTML =``;
+      errorMessage.style.display ="none";
+    }, 1500);
           }
         } else {
-          alert("Repeat Password is missing");
+          errorMessage.innerHTML =`
+      <div> 
+        <h1>Please Repeat your Password</h1>
+      </div>
+    `;
+    setTimeout(() => {
+      errorMessage.innerHTML =``;
+      errorMessage.style.display ="none";
+    }, 1500);
         }
       } else {
-        alert("Password is missing");
+        errorMessage.innerHTML =`
+      <div> 
+        <h1>Password is Missing</h1>
+      </div>
+    `;
+    setTimeout(() => {
+      errorMessage.innerHTML =``;
+      errorMessage.style.display ="none";
+    }, 1500);
       }
     } else {
-      alert("Username is missing");
+      errorMessage.innerHTML =`
+      <div> 
+        <h1>Username is missing</h1>
+      </div>
+    `;
+    setTimeout(() => {
+      errorMessage.innerHTML =``;
+      errorMessage.style.display ="none";
+    }, 15000);
     }
   } else {
-    alert("Username already exists!");
+    errorMessage.innerHTML =`
+      <div> 
+        <h1>Username Already Exists</h1>
+      </div>
+    `;
+    setTimeout(() => {
+      errorMessage.innerHTML =``;
+      errorMessage.style.display ="none";
+    }, 15000);
   }
 }

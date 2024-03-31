@@ -11,6 +11,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/login_style.css" />
+    <link rel="stylesheet" href="css/dummy.css" />
   </head>
 
   <body>
@@ -22,10 +23,12 @@
     </nav>
 
     <div class="bg-photo"></div>
-
+    
     <!-- Contents -->
     <div class="bgRegister_container">
-      <h2>SIGN-IN</h2>
+      <h2>SIGN-UP</h2>
+      <div class="userError"></div>
+
       <div class="sign_container">
         <div>
           <label for="username_input">Username</label>
@@ -39,7 +42,10 @@
         <div>
           <label for="fullname">Full name</label>
           <input type="text" />
-          <button onclick="register()" type="submit">Register</button>
+          <br>
+          <br>
+          
+          <button onclick="register()" class="colorful" type="submit">Register</button>
         </div>
       </div>
     </div>
