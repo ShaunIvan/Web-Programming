@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Loginn</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -10,46 +10,36 @@
       href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/login_style.css">
-
-</head>
-<body>
-
-    
-
+    <link rel="stylesheet" href="css/login_style.css" />
+  </head>
+  <body>
     <!-- Logo  -->
     <nav>
-        <div class="logocenter">
-            <h1>Logo</h1>
-        </div>
+      <div class="logocenter">
+        <img src="./IMG/logo.png" alt="" />
+      </div>
     </nav>
-    
+
+    <div class="bg-photo"></div>
+
     <!-- Contents -->
-    <div class="containerLogin">
-        <h2>LOGIN</h2>
-    </div>
-    
-    <div class="container1">
-
-        <div class="slide__container">
-
-            <label for="username_input">Username</label>
-            <input type="text" id="username_input">
-            <br><br>
-            <label for="password_input">Password</label>
-            <input type="password" id="password_input">
-            <br><br>
-            <button onclick="login()" id="loginbutton" type="submit">Login</button>
-                
-            <div class="smallcontainer">
-                <label>New Member? </label>
-                <a href="signin_page.html">Register Here!</a>
-            </div>
-
+    <div class="grid container1">
+      <h2>LOGIN</h2>
+      <div class="containerLogin">
+        <label for="username_input">Username</label>
+        <input type="text" id="username_input" />
+        <br /><br />
+        <label for="password_input">Password</label>
+        <input type="password" id="password_input" />
+        <br /><br />
+        <button id="loginbutton" type="submit">Login</button>
+        <div class="register_container">
+          <label>New Member? </label>
+          <a href="signin_page.html">Register Here!</a>
         </div>
-
+      </div>
     </div>
-    
-    <script src="./Javascript/login.js"></script>
-</body>
+
+    <script src="/Javascript/login.js"></script>
+  </body>
 </html>

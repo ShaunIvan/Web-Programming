@@ -1,19 +1,28 @@
+:root {
+    --primary--color: #213159;
+    --secondary--color: 3d6098;
+    --button--color: #f04b4c;
+    --background--color: #e7e7e7;
+}
+
 body {
     margin: 0;
     padding: 0;
     font-family: "Jost";
 }
 
-.logo {
+.logo img {
     color: white;
     text-decoration: none;
+    height: 70px;
+    margin-left: 40px;
 }
 
 /* Navigation */
 
 nav {
     display: flex;
-    background-color: #57C261;
+    background-color: var(--primary--color);
     position: relative;
     text-align: center;
     padding: 15px 30px;
@@ -34,7 +43,7 @@ nav {
     font-size: 15px;
     cursor: pointer;
     color: white;
-    background-color: #204B7E;
+    background-color: var(--button--color);
     border-radius: 0 5px 5px 0;
 }
 
@@ -86,10 +95,14 @@ nav {
 /* Contents */
 
 .container1 {
-    display: flex;
+    position: relative;
     background-color: #E4E4E4;
     margin: 0 auto;
     max-width: 1460px;
+}
+
+.product__item{
+    display: flex;
 }
 
 .item_image {
@@ -100,28 +113,19 @@ nav {
     /* box-shadow: 0 5px 10px black; */
 }
 
-.item_name, .item_price, .addToCart {
-
-    /* margin-left: 650px; */
-}
-
 .item_price {
     font-size: 20px;
 }
 
 .addToCart {
+    font-size: 18px;
     color: white;
-    background-color: #204B7E;
-    padding: 10px 30px 10px 30px;
+    background-color: var(--button--color);
+    padding: 15px 100px 15px 100px;
     border: none;
     border-radius: 5px;
-}
-.buy__button {
-    color: white;
-    background-color: #57C261;
-    padding: 10px 50px 10px 50px;
-    border: none;
-    border-radius: 5px;
+    margin-left: 65px;
+    cursor: pointer;
 }
 
 label {
@@ -135,18 +139,32 @@ input {
 
 .item_description {
     margin-top: 20px;
-    margin-right: 100px;
+    margin-right: 25px;
     font-size: 30px;
 } 
 .item_description img {
     height: 20px;
+    margin-bottom: 15px;
 }
 .item_description button {
-    margin-top: 10px;
-    margin-bottom: 15px;
+    margin: 0 auto;
+    /* margin-top: 10px;
+    margin-bottom: 15px; */
+    display: flex;
+}
+
+.specification {
+    font-size: 18px;
 }
 
 .item_details {
     font-size: 15px;
-
+    margin-right: 20px;
+    display: table-row;
+    text-align: justify;
 }
+
+
+
+
+
