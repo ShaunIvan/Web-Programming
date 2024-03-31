@@ -18,7 +18,7 @@
     <nav>
       <a class="logo" href="index.html">
         <div class="logo">
-          <h1>Logo</h1>
+          <img src="./IMG/logo.png" alt="">
         </div>
       </a>
 
@@ -29,7 +29,7 @@
       </div>
 
       <div id="cart">
-        <a href="cart_page.html"><img src="./IMG/carticon.png" alt="" /></a>
+        <button id="cart__button"><img src="./IMG/carticon.png" alt="" /></button>
       </div>
 
       <div id="logout">
@@ -40,6 +40,46 @@
     <!-- Contents -->
 
     <!-- Advertisement slide -->
+    <div class="modal__cart_container">
+      <div class="confirmPop"></div>
+      <div class="noItemPop"></div>
+      <div class="modal-overlay" id="modalOverlay"></div>
+      <div class="command__container">
+        <div class="select-container">
+          <input type="checkbox" id="selectAll" />
+          <label for="selectAll">Select All</label>
+        </div>
+        <div class="delete-container">
+          <button class="command_deleteBtn">
+            <img class="deletebtn-img" src="./IMG/trashbin.png" alt="" />DELETE
+          </button>
+        </div>
+      </div>
+      <div class="grid_con cart__container"></div>
+      <div class="order">
+        <div class="Summary">
+          <h2>Order Summary</h2>
+        </div>
+        <div class="grid price__section">
+          <div>
+            <p>Subtotal (<span class="itemQty">0</span> item/s)</p>
+            <p>Shipping Fee</p>
+          </div>
+          <div class="subtotal_price cart-total">
+            <span id="cartTotal">₱ 0.00</span>
+            <span id="shippingFee">₱ 0.00</span>
+          </div>
+        </div>
+        <div class="grid price__section">
+          <p>Total Amount</p>
+          <p id="totalPrice" class="subtotal_price">₱ 0.00</p>
+        </div>
+        <button id="checkoutbtn">
+          PROCEED TO CHECKOUT(<span class="itemQty">0</span>)
+        </button>
+      </div>
+      </div>
+    </div>
     <div class="container1">
       <div class="slide__container">
         <div class="slider">
@@ -71,10 +111,8 @@
           </div>
         </div>
       </div>
-
       <!-- D -->
       <h1 class="product_title">Products</h1>
-
       <div class="grid product__container">
         <!-- ITEMS -->
         <div class="product__card" id="item1">
@@ -95,6 +133,19 @@
                   Consumption: 34W Power Consumption: 34W Power Consumption: 34W
                   Consumption: 34W
                 </p>
+                <div style="display:none;">
+                  <ul>
+                    <li>
+                      hatdog
+                    </li>
+                    <li>
+                      hatdog
+                    </li>
+                    <li>
+                      hatdog
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </a>

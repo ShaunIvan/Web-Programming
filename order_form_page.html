@@ -9,7 +9,7 @@
       href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./CSS/cart_page.css" />
+    <link rel="stylesheet" href="./CSS/order_form.css" />
 
     <title>Cart</title>
   </head>
@@ -17,12 +17,8 @@
     <nav>
       <div class="logo">
         <a href="index.html">
-          <h1>Logoo</h1>
+          <img src="./IMG/logo.png" alt="" />
         </a>
-      </div>
-
-      <div class="searchbox">
-        <input type="search" placeholder="Search here" /><button>Search</button>
       </div>
     </nav>
 
@@ -63,17 +59,6 @@
           </form>
         </div>
       </div>
-      <div class="command__container">
-        <div class="select-container">
-          <input type="checkbox" id="selectAll" />
-          <label for="selectAll">Select All</label>
-        </div>
-        <div class="delete-container">
-          <button class="command_deleteBtn">
-            <img class="deletebtn-img" src="./IMG/trashbin.png" alt="" />DELETE
-          </button>
-        </div>
-      </div>
       <div class="confirmPop"></div>
       <div class="shippingPop"></div>
       <div class="noItemPop"></div>
@@ -99,13 +84,17 @@
             <p>Total Amount</p>
             <p id="totalPrice" class="subtotal_price">₱ 0.00</p>
           </div>
-          <button id="checkoutbtn">
-            PROCEED TO CHECKOUT(<span class="itemQty">0</span>)
-          </button>
+          <div class="buttons">
+            <button id="place_Order">
+              PROCEED TO CHECKOUT(<span class="itemQty">0</span>)
+            </button>
+            <button id="cancelPurchase">Cancel</button>
+          </div>
         </div>
       </div>
     </div>
-    <!-- <script src="./Javascript/cart.js"></script> -->
-    <script src="./Javascript/dummy.js"></script>
+
+    <script src="./Javascript/order_form.js"></script>
+    <!-- <script src="./Javascript/dummy.js"></script> -->
   </body>
 </html>
