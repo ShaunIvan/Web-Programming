@@ -1,3 +1,10 @@
+:root {
+    --primary--color: #213159;
+    --secondary--color: #3d6098;
+    --button--color: #f04b4c;
+    --background--color: #e7e7e7;
+}
+
 html{
     margin: 0;
     padding: 0;
@@ -17,16 +24,23 @@ body {
 }
 
 .logo {
-    
+    color: white;
+    text-decoration: none; 
+    margin: 0 auto;
+}
+.logo img{
+    width: 100px;
 }
 
 nav {
     display: flex;
-    width: 100vw;
-    height: 120px;
-    background-color: #57C261;
+    background-color: var(--primary--color);
+    position:sticky;
+    top: 0;
     text-align: center;
     padding: 15px 30px;
+    overflow: hidden;
+    z-index: 1;
 }
 
 .searchbox{
@@ -58,6 +72,7 @@ nav {
 /* TOP CONTAINER CART */
 
 .top__container{
+    width: 1240px;
     display: flex;
     padding-top: 10px;
     justify-content: space-evenly;
@@ -138,44 +153,12 @@ nav {
     margin: 0 20px;
 }
 
-.command__container{
-    display: flex;
-    height: 36px;
-    width: 850px;
-    background-color: #fff;
-    margin-left: 25px;
-    margin-right: 15px;
-    align-items: center;
-    
-}
-
-.select-container{
-    display: flex;
-    margin-left: 4px;
-    flex: 1;
-}
-
-.delete-container button{
-    display: flex;
-    background: transparent;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    border: none;
-    flex: 1;
-}
-
-.delete-container button img{
-    width: 18px;
-    margin-right: 4px;
-}
-
 .cart__items{
     display: flex;
     height: 126px;
     width: 850px;
     background-color: #FFF;
-    margin: 10px 5px 0;
+    margin: 0 5px 0;
 }
 
 .cart__items label{
@@ -235,12 +218,11 @@ nav {
 .order{
     position: sticky;
     justify-self: end;
-    width: 350px;
-    height: 307px;
+    width: 355px;
+    height: 340px;
     background-color: #FFF;
     padding: 10px;
-    margin-top: -35px;
-    margin-right: -20px;
+    margin-left: -5px;
 }
 .Summary{
     border-bottom: 1px solid #ccc;
@@ -260,7 +242,11 @@ nav {
     color: #57C261;
 }
 
-#checkoutbtn{
+.buttons{
+    text-align: center;
+}
+
+#place_Order{
     background-color: #57C261;
     color: #fff;
     border-style: none;
@@ -271,8 +257,18 @@ nav {
     transition: background-color 0.2s;
 }
 
-#checkoutbtn:hover{
+#place_Order:hover{
     background-color: #3e8c46;
+}
+
+#cancelPurchase{
+    background-color: transparent;
+    border: none;
+    width: 70px;
+    height: 20px;
+    font-size: 1rem;
+    cursor:pointer;
+    margin-top: 10px;
 }
 
 /* CANCEL ORDER PROMPT*/
