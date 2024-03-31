@@ -1,3 +1,10 @@
+:root {
+    --primary--color: #213159;
+    --secondary--color: 3d6098;
+    --button--color: #f04b4c;
+    --background--color: #e7e7e7;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -13,7 +20,7 @@ body {
 
 nav {
     display: flex;
-    background-color: #57C261;
+    background-color: var(--primary--color);
     position: relative;
     text-align: center;
     padding: 15px 30px;
@@ -34,7 +41,7 @@ nav {
     font-size: 15px;
     cursor: pointer;
     color: white;
-    background-color: #204B7E;
+    background-color: var(--button--color);
     border-radius: 0 5px 5px 0;
 }
 
@@ -111,20 +118,13 @@ nav {
 .addToCart {
     font-size: 18px;
     color: white;
-    background-color: #204B7E;
+    background-color: var(--button--color);
     padding: 15px 100px 15px 100px;
     border: none;
     border-radius: 5px;
     margin-left: 65px;
     cursor: pointer;
 }
-/* .buy__button {
-    color: white;
-    background-color: #57C261;
-    padding: 10px 50px 10px 50px;
-    border: none;
-    border-radius: 5px;
-} */
 
 label {
     font-size: 20px;
