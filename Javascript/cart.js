@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function updateCart() {
   const cartContainer = document.querySelector(".cart__container");
-  const items = JSON.parse(localStorage.getItem("product_items")) || [];
+  const items = JSON.parse(sessionStorage.getItem("product_items")) || [];
 
   cartContainer.innerHTML = "";
 
@@ -145,9 +145,9 @@ function showDeletePrompt(index) {
 }
 
 function removeItem(index) {
-  let items = JSON.parse(localStorage.getItem("product_items")) || [];
+  let items = JSON.parse(sessionStorage.getItem("product_items")) || [];
   items.splice(index, 1);
-  localStorage.setItem("product_items", JSON.stringify(items));
+  sessionStorage.setItem("product_items", JSON.stringify(items));
 
   const modalOverlay = document.getElementById("modalOverlay");
   modalOverlay.style.display = "none";
@@ -198,14 +198,14 @@ function deleteSelected() {
     });
 
     document.querySelector(".removeBtn").addEventListener("click", function () {
-      const items = JSON.parse(localStorage.getItem("product_items")) || [];
+      const items = JSON.parse(sessionStorage.getItem("product_items")) || [];
       // Filter out the items that are not checked, to keep them
       const newItems = items.filter(
         (_, index) =>
           !document.querySelectorAll(".cart__items .select-item")[index].checked
       );
 
-      localStorage.setItem("product_items", JSON.stringify(newItems));
+      sessionStorage.setItem("product_items", JSON.stringify(newItems));
       confirmPop.innerHTML = ""; // Clear confirmation dialog
       modalOverlay.style.display = "none"; // Hide overlay
       updateCart(); // Re-render the cart items
@@ -232,7 +232,7 @@ function shippingDetails() {
     cityAd &&
     barangAd
   ) {
-    localStorage.setItem(
+    sessionStorage.setItem(
       "shippingDetails",
       JSON.stringify({
         fname,
@@ -265,7 +265,7 @@ function proceedCheckOut() {
 
   const noItemPop = document.querySelector(".noItemPop");
   const cartItems = document.querySelectorAll(".cart__items");
-  const items = JSON.parse(localStorage.getItem("product_items")) || [];
+  const items = JSON.parse(sessionStorage.getItem("product_items")) || [];
   let confirmedItems = [];
 
   cartItems.forEach((item, index) => {
@@ -291,9 +291,9 @@ function proceedCheckOut() {
     }
   });
 
-  localStorage.setItem("product_items", JSON.stringify(items));
+  sessionStorage.setItem("product_items", JSON.stringify(items));
   if (confirmedItems.length > 0) {
-    localStorage.setItem("confirmedItems", JSON.stringify(confirmedItems));
+    sessionStorage.setItem("confirmedItems", JSON.stringify(confirmedItems));
     window.location.href = "order_confirm_page";
   } else {
     noItemPop.innerHTML = `

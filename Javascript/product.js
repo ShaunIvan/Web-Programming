@@ -54,13 +54,13 @@ function addToCart(event) {
     dataP: dataPrice,
   };
 
-  let product_items = JSON.parse(localStorage.getItem("product_items")) || [];
+  let product_items = JSON.parse(sessionStorage.getItem("product_items")) || [];
 
   product_items.push(itemDetails);
 
-  localStorage.setItem("product_items", JSON.stringify(product_items));
+  sessionStorage.setItem("product_items", JSON.stringify(product_items));
 
-  var storedItem = localStorage.getItem("product_items");
+  var storedItem = sessionStorage.getItem("product_items");
   var storedItemParse = JSON.parse(storedItem);
 
   console.log(storedItemParse);

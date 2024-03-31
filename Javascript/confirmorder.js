@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function orderShippingConfirmed() {
-  const users = JSON.parse(localStorage.getItem("shippingDetails"));
+  const users = JSON.parse(sessionStorage.getItem("shippingDetails"));
   if (users) {
     document.getElementById("fullname").textContent =
       users.fname + " " + users.lname || "No name provided";
@@ -27,12 +27,12 @@ function orderShippingConfirmed() {
       users.emailAd || "No email provided";
   }
 
-  const item = JSON.parse(localStorage.getItem("confirmedItems"));
+  const item = JSON.parse(sessionStorage.getItem("confirmedItems"));
 }
 
 function orderInvoice() {
   const orderContainer = document.querySelector(".ordered_items");
-  const cartItems = JSON.parse(localStorage.getItem("confirmedItems"));
+  const cartItems = JSON.parse(sessionStorage.getItem("confirmedItems"));
 
   orderContainer.innerHTML = "";
 
@@ -45,6 +45,7 @@ function orderInvoice() {
             <div class="price--delete">
                 <p class="product__price" data-price="${items.itemDataP}">${items.itemPrice}</p>
             </div>
+            <label for="item__quantity">Quantity:</label>
             <input class="item__quantity" value="${items.itemQty}" readonly/>
         `;
     orderContainer.appendChild(itemElement);
