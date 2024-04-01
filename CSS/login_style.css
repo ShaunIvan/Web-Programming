@@ -127,7 +127,7 @@ nav {
 
 .bgRegister_container{
     position: static;
-    width: 600px;
+    width: 650px;
     background: rgb(61, 96, 152, 0.8);
     filter: blur(100%);
     margin: 120px auto;
@@ -155,6 +155,16 @@ nav {
 
 .sign_container p{
     font-weight: 300;
+}
+
+.name_input{
+    display: flex;
+    justify-content: space-between;
+}
+
+.name_input input{
+    display: block;
+    width: 145px;
 }
 
 .colorful {

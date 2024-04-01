@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   orderInvoice();
+  userDetailsLoad();
 
   //CANCELS PURCHASE
   const cancelPurchase = document.getElementById("cancelPurchase");
@@ -103,6 +104,19 @@ function orderInvoice() {
     orderContainer.appendChild(itemElement);
   });
   updateCartTotal();
+}
+
+// NAME PRELOAD
+
+function userDetailsLoad() {
+  const firstName = sessionStorage.getItem("first_Name");
+  const lastName = sessionStorage.getItem("last_Name");
+  if (firstName) {
+    document.getElementById("firstName").value = firstName;
+  }
+  if (lastName) {
+    document.getElementById("lastName").value = lastName;
+  }
 }
 
 // CHECKS IF SHIPPING DETAILS HAVE BEEN FILLED
