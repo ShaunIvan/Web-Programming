@@ -2,6 +2,10 @@ document.addEventListener("DOMContentLoaded", () => {
   orderInvoice();
   userDetailsLoad();
 
+  // CLEARS THE SESSION STORAGE OF THE ORDER FORM
+  const homePage = document.getElementById("logolink");
+  homePage.addEventListener("click", sessionClear);
+
   //CANCELS PURCHASE
   const cancelPurchase = document.getElementById("cancelPurchase");
   cancelPurchase.addEventListener("click", cancelBuy);
@@ -104,6 +108,12 @@ function orderInvoice() {
     orderContainer.appendChild(itemElement);
   });
   updateCartTotal();
+}
+
+// CLEARS THE STORAGE OF THE ORDER FORM
+function sessionClear() {
+  sessionStorage.removeItem("confirmedItems");
+  window.location.href = "index.html";
 }
 
 // NAME PRELOAD
