@@ -24,7 +24,7 @@ body {
 
 /* Navigation */
 
-.grid{
+.grid {
     display: grid;
 }
 
@@ -91,8 +91,13 @@ nav {
 }
 
 #cart_ img {
-    width: 50px;
+    width: 40px;
     margin-left: -5px;
+    transition: 0.2s;
+}
+#cart_ img:hover {
+    opacity: 75%;
+    transition: 0.2s;
 }
 
 #logout_ {
@@ -103,7 +108,7 @@ nav {
     color: white;
     transition: 0.2s;
 }
-#logout a:hover {
+#logout_ a:hover {
     color: #f04b4c;
     transition: 0.2s;
 }
