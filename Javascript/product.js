@@ -354,3 +354,9 @@ function proceedCheckOut() {
   }
   updateCart();
 }
+
+function logoutinstant() {
+  sessionStorage.setItem("logged", false);
+  window.location.href = "login_page.html";
+}
+
