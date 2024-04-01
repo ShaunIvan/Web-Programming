@@ -61,6 +61,9 @@ nav {
     background-color: var(--button--color);
     border-radius: 0 5px 5px 0;
 }
+.searchbox button:hover {
+    background-color: #bd3737;
+}
 
 .searchbox input {
     outline: none;
@@ -98,6 +101,11 @@ nav {
 #logout_ a {
     text-decoration: none;
     color: white;
+    transition: 0.2s;
+}
+#logout a:hover {
+    color: #f04b4c;
+    transition: 0.2s;
 }
 
 
@@ -383,7 +391,6 @@ nav {
     background-color: white;
     margin: 30px 30px;
     border-radius: 6px;
-    /* box-shadow: 0 5px 10px black; */
 }
 
 .item_price {
@@ -399,6 +406,11 @@ nav {
     border-radius: 5px;
     margin-left: 65px;
     cursor: pointer;
+    transition: 0.2s;
+}
+.addToCart:hover {
+    background-color: #bd3737;
+    transition: 0.2s;
 }
 
 label {
@@ -421,8 +433,6 @@ input {
 }
 .item_description button {
     margin: 0 auto;
-    /* margin-top: 10px;
-    margin-bottom: 15px; */
     display: flex;
 }
 
@@ -440,6 +450,22 @@ input {
 .list_detials ul {
     border: solid;
     font-size: 15px;
+}
+
+.breadcrumb {
+    position: absolute;
+    margin-top: 2px;
+    margin-left: 10px;
+    text-decoration: none;
+    color: gray;
+    cursor: pointer;
+}
+.breadcrumb a {
+    color: black;
+    text-decoration: none;
+}
+.breadcrumb a:hover {
+    text-decoration: underline;
 }
 
 
