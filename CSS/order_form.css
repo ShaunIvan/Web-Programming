@@ -6,8 +6,8 @@
 }
 
 html{
-    margin: 0;
-    padding: 0;
+    font-family: "Jost";
+    font-size: 62.5%;
 }
 
 *{
@@ -15,12 +15,10 @@ html{
 }
 
 body {
-    position: relative;
     margin: 0;
     padding: 0;
-    font-family: "Jost";
-    min-width: 950px;
     background-color: #F0F0F0;
+    
 }
 
 .logo {
@@ -33,40 +31,13 @@ body {
 }
 
 nav {
+    position: sticky;
     display: flex;
     background-color: var(--primary--color);
-    position:sticky;
-    top: 0;
+    width: 100vw;
     text-align: center;
-    padding: 15px 30px;
-    overflow: hidden;
-    z-index: 1;
-}
-
-.searchbox{
-    position: relative;
-    margin: 52px auto 0;
-    align-self: center;
-}
-
-.searchbox button{
-    height: 56px;
-    width: 55px;
-    border: none;
-    font-size: 15px;
-    cursor: pointer;
-    background-color: #204B7E;
-    border-radius: 0 5px 5px 0;
-}
-
-.searchbox input {
-    outline: none;
-    height: 56px;
-    width: 746px;
-    padding-left: 10px;
-    font-size: 15px;
-    border: none;
-    border-radius: 5px 0 0 5px;
+    margin: 0;
+    padding: 0;
 }
 
 /* TOP CONTAINER CART */
@@ -121,20 +92,7 @@ nav {
 }
 
 
-
-
 /* CONTAINER */
-
-.modal-overlay{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1000;
-    display: none;
-}
 
 .container{
     position: relative;
@@ -190,15 +148,6 @@ nav {
     height: 65px;
 }
 
-.price--delete button{
-    position: relative;
-    align-self: center;
-    background: transparent;
-    border: none;
-    top: 5px;
-    cursor: pointer;
-}
-
 .deletebtn-img{
     width: 20px;
 }
@@ -219,7 +168,7 @@ nav {
     position: sticky;
     justify-self: end;
     width: 355px;
-    height: 340px;
+    height: 250px;
     background-color: #FFF;
     padding: 10px;
     margin-left: -5px;
@@ -273,15 +222,6 @@ nav {
 
 /* CANCEL ORDER PROMPT*/
 
-.confirmPop{
-    position: fixed;
-    background: #FFF;
-    border-radius: 5px;
-    z-index: 2000;
-    box-shadow: 8px 4px 15px rgb(83, 83, 83);
-    top: 40%;
-    left: 40%;
-}
 
 .shippingPop{
     position: absolute;
@@ -293,80 +233,13 @@ nav {
     left: 40%;
 }
 
-.noItemPop{
-    position: absolute;
-    background: #FFF;
-    border-radius: 5px;
-    z-index: 2000;
-    box-shadow: 0px 0px 15px rgb(255, 27, 27);
-    top: 55%;
-    left: 25%;
-}
-
-.confirmation h1{
-    font-size: 1.5rem;
-}
-
-.confirmation{
-    display: flex;
-    flex-direction: column;
-    width: 400px;
-    height: 200px;
-    padding: 0 10px;
-}
-
-.selected_confirm{
-    height: 240px;
-}
-
-.errorDelete{
-    text-align: center;
-    width: 300px;
-    height: 50px;
-}
-
 .errorShippingDetails{
     text-align: center;
-    width: 300px;
-    height: 50px;
+    width: 220px;
+    height: 40px;
 }
 
-.errorSelectItem{
-    text-align: center;
-    width: 300px;
-    height: 50px;
+.errorShippingDetails p{
+    margin-top: 20px;
+    font-size: 1.4rem;
 }
-
-.button_container{
-    align-self: flex-end;
-    height: 100%;
-    margin-top: 30px;
-    margin-right: 5px;
-}
-
-.button_container button{
-    font-size: 1.2rem;
-    font-weight: 300;
-    border: none;
-    cursor: pointer;
-    transition: 0.2s;
-    
-}
-
-.button_container button:hover{
-    box-shadow: 4px 4px 5px #313131;
-    transform: scale(1.01);
-}
-
-.removeBtn{
-    width: 120px;
-    height: 35px;
-    background: #204B7E;
-    color: #fff;
-}
-
-.cancelBtn{
-    width: 100px;
-    height: 35px;
-}
-

@@ -6,11 +6,13 @@ function myFunction() {
   var productLink = document.getElementsByClassName("productlink");
 
   // CART BUTTON
+  const confirmPop = document.querySelector(".confirmPop");
   const cartButton = document.getElementById("cart__button");
   const cartContainer = document.querySelector(".modal__cart_container");
 
   cartButton.addEventListener("click", () => {
     cartContainer.classList.toggle("open");
+    confirmPop.innerHTML = "";
   });
   //ANCHOR LINK ARRAY
   for (var i = 0; i < productLink.length; i++) {
@@ -107,6 +109,18 @@ function myFunction() {
       performSearch();
     }
   });
+
+  // PERFORM SEARCH IF USER IS IN THE PRODUCT PAGE
+
+  const searchQuery = sessionStorage.getItem("searchQuery");
+
+  if (searchQuery) {
+    const searchInput = document.querySelector(".searchbox input");
+    searchInput.value = searchQuery;
+    sessionStorage.removeItem("searchQuery");
+
+    performSearch();
+  }
 }
 
 // IMAGE SLIDER AUTOMATIC
@@ -139,9 +153,8 @@ function isLogged() {
 
 // USER LOGOUT
 function logoutinstant() {
-  let logged = sessionStorage.getItem("logged");
   sessionStorage.setItem("logged", false);
-  window.location.reload();
+  window.location.href = "login_page.html";
 }
 
 // NEXT PAGE REDIRECT
@@ -320,9 +333,6 @@ function checkboxAndQuantity() {
 
 // SHOWS A DELETE PROMPT UPON CLICKING DELETE
 function showDeletePrompt(index) {
-  const modalOverlay = document.getElementById("modalOverlay");
-  modalOverlay.style.display = "block";
-
   const confirmPop = document.querySelector(".confirmPop");
   confirmPop.innerHTML = `
         <div class='confirmation'>
@@ -341,7 +351,6 @@ function showDeletePrompt(index) {
 
   document.querySelector(".cancelBtn").addEventListener("click", function () {
     confirmPop.innerHTML = "";
-    modalOverlay.style.display = "none";
   });
 }
 

@@ -1,6 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
   orderInvoice();
 
+  //CANCELS PURCHASE
+  const cancelPurchase = document.getElementById("cancelPurchase");
+  cancelPurchase.addEventListener("click", cancelBuy);
+
   const proceedButton = document.getElementById("place_Order");
   proceedButton.addEventListener("click", proceedCheckOut);
 });
@@ -26,6 +30,11 @@ function orderInvoice() {
     orderContainer.appendChild(itemElement);
   });
   updateCartTotal();
+}
+
+function cancelBuy() {
+  sessionStorage.removeItem("confirmedItems");
+  window.location.href = "index.html";
 }
 
 function updateCartTotal() {

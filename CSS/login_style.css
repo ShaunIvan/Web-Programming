@@ -148,6 +148,15 @@ nav {
     justify-content: center;
 }
 
+.sign_container a{
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.sign_container p{
+    font-weight: 300;
+}
+
 .colorful {
     background-color: green;
     animation-name: button;

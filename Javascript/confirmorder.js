@@ -1,6 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
   orderShippingConfirmed();
   orderInvoice();
+
+  const homePage = document.getElementById("logolink");
+  homePage.addEventListener("click", sessionClear);
 });
 
 //DISPLAYS THE SHIPPING USER DETAILS
@@ -30,6 +33,12 @@ function orderShippingConfirmed() {
   }
 
   const item = JSON.parse(sessionStorage.getItem("confirmedItems"));
+}
+
+//REMOVE STORAGE
+function sessionClear() {
+  sessionStorage.removeItem("confirmedItems");
+  window.location.href = "index.html";
 }
 
 // SHOWS ALL PURCHASED ITEMS

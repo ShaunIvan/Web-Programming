@@ -76,18 +76,13 @@ nav {
     width: 50px;
     height: 50px;
     align-self: center;
+    cursor: pointer;
 }
 
 #cart {
     align-self: center;
 }
 
-#cart a {
-    margin-right: 0px;
-    text-decoration: none;
-    color: white;
-   
-}
 #cart img {
     width: 50px;
     margin-left: -5px;
@@ -284,7 +279,7 @@ nav {
 
 .cart__container{
     position: relative;
-    max-height: 600px;
+    max-height: 400px;
     overflow-y: scroll;
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -383,6 +378,9 @@ nav {
     border-bottom: 1px solid #ccc;
 }
 
+.price__section div{
+    display: flex;
+}
 
 .subtotal_price{
     display: flex;
