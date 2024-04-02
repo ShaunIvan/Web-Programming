@@ -403,11 +403,9 @@ function deleteSelected() {
           </div>
       </div>
     `;
-    modalOverlay.style.display = "block";
 
     document.querySelector(".cancelBtn").addEventListener("click", function () {
       confirmPop.innerHTML = "";
-      modalOverlay.style.display = "none";
     });
 
     document.querySelector(".removeBtn").addEventListener("click", function () {
@@ -420,7 +418,6 @@ function deleteSelected() {
 
       sessionStorage.setItem("product_items", JSON.stringify(newItems));
       confirmPop.innerHTML = ""; // Clear confirmation dialog
-      modalOverlay.style.display = "none"; // Hide overlay
       updateCart(); // Re-render the cart items
     });
   }
