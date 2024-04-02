@@ -78,7 +78,7 @@ nav {
 .bg-photo{
     position: absolute;
     z-index: -1;
-    background-image: url(/IMG/bgcomputer.jpg);
+    background-image: url(../IMG/bgcomputer.jpg);
     height: 100vh;
     width: 100%;
     background-size: cover;
