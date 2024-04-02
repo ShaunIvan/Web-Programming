@@ -19,25 +19,24 @@ document.addEventListener("DOMContentLoaded", () => {
   productLoad();
 
   // REDIRECTS THE USER TO THE INDEX TO SEARCH THE PRODUCT
-  const searchInput = document.querySelector('.searchbox input');
+  const searchInput = document.querySelector(".searchbox input");
   const searchButton = document.querySelector(".searchbox button");
 
-  function searchItem(){
+  function searchItem() {
     const searchText = searchInput.value.trim().toLowerCase();
-    if(searchText){
-      sessionStorage.setItem('searchQuery', searchText);
+    if (searchText) {
+      sessionStorage.setItem("searchQuery", searchText);
 
-      window.location.href = 'index.html';
+      window.location.href = "index.html";
     }
   }
 
-  searchButton.addEventListener('click', searchItem);
-  searchInput.addEventListener('keypress', function(event){
-    if(event.key === "Enter"){
+  searchButton.addEventListener("click", searchItem);
+  searchInput.addEventListener("keypress", function (event) {
+    if (event.key === "Enter") {
       searchItem();
     }
   });
-  
 });
 
 // LOADS THE PRODUCT

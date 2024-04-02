@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Register</title>
+    <link rel="icon" type="image/x-icon" href="./IMG/logo.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -11,9 +12,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/login_style.css" />
-    <link rel="stylesheet" href="css/dummy.css" />
   </head>
-
   <body>
     <!-- Logo  -->
     <nav>
@@ -40,8 +39,17 @@
         </div>
 
         <div>
-          <label for="fullname">Full name</label>
-          <input type="text" />
+          <div class="name_input">
+            <div>
+              <label for="first_Name">First Name</label>
+              <input type="text" id="first_Name" />
+            </div>
+            <div>
+              <label for="last_Name">Last Name</label>
+              <input type="text" id="last_Name" />
+            </div>
+          </div>
+
           <br />
           <br />
           <button onclick="register()" class="colorful" type="submit">
