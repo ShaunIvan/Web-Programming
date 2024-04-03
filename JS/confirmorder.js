@@ -38,6 +38,7 @@ function orderShippingConfirmed() {
 //REMOVE STORAGE
 function sessionClear() {
   sessionStorage.removeItem("confirmedItems");
+  sessionStorage.removeItem("shippingDetails");
   window.location.href = "index.html";
 }
 
